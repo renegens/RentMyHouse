@@ -1,37 +1,27 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: renegens
- * Date: 5/18/15
- * Time: 14:58
- */?>
-
-<aside class="bg-dark">
-    <div class="container text-center">
-        <div class="call-to-action">
-            <h2>Free Download at Start Bootstrap!</h2>
-            <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <em>&copy;copyright 2014 all rights reserved</em>
+        </div>
+        <div class="col-md-6">
+            <p class="text-right">
+                <a href="#"><img src="./img/social/Facebook.png" alt="" /></a>
+                <a href="#"><img src="./img/social/Twitter.png" alt="" /></a>
+                <a href="#"><img src="./img/social/Google+.png" alt="" /></a>
+                <a href="#"><img src="./img/social/Pinterest.png" alt="" /></a>
+                <a href="#"><img src="./img/social/Linkedin.png" alt="" /></a>
+                <a href="#"><img src="./img/social/Myspace.png" alt="" /></a>
+                <a href="#"><img src="./img/social/Dribble.png" alt="" /></a>
+                <a href="#"><img src="./img/social/YouTube.png" alt="" /></a>
+                <a href="#"><img src="./img/social/Flickr.png" alt="" /></a>
+                <a href="#"><img src="./img/social/Tumblr.png" alt="" /></a>
+            </p>
         </div>
     </div>
-</aside>
+</div>    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Let's Get In Touch!</h2>
-                <hr class="primary">
-                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-            </div>
-            <div class="col-lg-4 col-lg-offset-2 text-center">
-                <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                <p>123-456-6789</p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-
+</body>
+</html>
