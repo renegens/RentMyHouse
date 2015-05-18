@@ -16,7 +16,7 @@
 
     <div class="carousel-inner">
         <div class="item active">
-            <img src="http://lorempixel.com/1920/600/business/Slide" alt="...">
+            <img src="img/carousel/carousel-1.jpg" alt="villa piano">
             <div class="carousel-caption">
                 <h1>At vero eos</h1>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="item">
-            <img src="http://lorempixel.com/1900/600/transport/Slide" alt="...">
+            <img src="img/carousel/carousel-2.jpg" alt="villa by pool">
             <div class="carousel-caption">
                 <h1>At vero eos</h1>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="item">
-            <img src="http://lorempixel.com/1900/600/nature/Slide" alt="...">
+            <img src="img/carousel/carousel-3.jpg" alt="villa tropica">
             <div class="carousel-caption">
                 <h1>At vero eos</h1>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>

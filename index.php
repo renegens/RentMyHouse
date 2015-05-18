@@ -9,6 +9,7 @@ include("includes/carousel.php");
 include("includes/onerow.php");
 include("includes/images.php");
 include("includes/maps.php");
+include "includes/loginform.php";
 include("includes/footer.php");
 
 ?>
