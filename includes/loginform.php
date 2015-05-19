@@ -1,91 +1,61 @@
-<div class="well well-sm">
-    <form class="form-horizontal" role="form" data-toggle="validator" id="signInForm" method="post" action="./controllers/userlogin.php">
-        <fieldset>
-
-            <!-- Form Name -->
-            <legend>Sign In</legend>
-
-            <!-- Text input-->
+<div class="row">
+    <div class="well col-lg-4 col-lg-offset-1">
+        <h3>Sign Up</h3>
+        <form data-toggle="validator" role="form" method="post" action="./controllers/usercreate.php">
             <div class="form-group">
-                <label class="col-md-4 control-label" for="username">Username</label>
-                <div class="col-md-4">
-                    <input id="username" name="username" type="text" placeholder="username" class="form-control input-md" data-minlength="3" required>
-
-                </div>
+                <label for="inputName" class="control-label">Username</label>
+                <input type="text" class="form-control" id="inputName" name="username" placeholder="username" required>
             </div>
 
-            <!-- Password input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="passwordinput">Password</label>
-                <div class="col-md-4">
-                    <input id="passwordinput" name="passwordinput" type="password" placeholder="************" class="form-control input-md" data-minlength="8" required>
-
+                <label for="inputEmail" class="control-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="That email address is invalid" required>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label">Password</label>
+                <div class="form-group">
+                    <input type="password" data-minlength="8" class="form-control" id="inputPassword" placeholder="Password" required>
+                    <span class="help-block">Minimum of 8 characters</span>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+                    <div class="help-block with-errors"></div>
                 </div>
             </div>
-
-            <!-- Button -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="singlebutton"></label>
-                <div class="col-md-4">
-                    <button id="signInButton" name="singlebutton" class="btn btn-primary">Sign In</button>
-                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="well col-lg-4 col-lg-offset-1">
+        <h3>Sign In</h3>
+        <form data-toggle="validator" role="form" method="post" action="./controllers/userlogin.php">
+            <div class="form-group">
+                <label for="inputName" class="control-label">Username</label>
+                <input type="text" class="form-control" id="inputName" name="username" placeholder="username" required>
             </div>
 
-        </fieldset>
-    </form>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label">Password</label>
+                <div class="form-group">
+                    <input type="password" data-minlength="8" class="form-control" id="inputPassword" placeholder="Password" required>
+                    <span class="help-block">Minimum of 8 characters</span>
+                </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
 </div>
-<div class="well well-sm">
-    <form class="form-horizontal" role="form" data-toggle="validator" method="post" action="./controllers/usercreate.php">
-        <fieldset>
 
-            <!-- Form Name -->
-            <legend>Sign Up</legend>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="Name">Email</label>
-                <div class="col-md-4">
-                    <input id="Name" name="Name" type="text" placeholder="@" class="form-control input-md"  data-minlength="5" required>
-
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="username">Username</label>
-                <div class="col-md-4">
-                    <input id="username" name="username" type="text" placeholder="username" class="form-control input-md" data-minlength="3" required>
-
-                </div>
-            </div>
-
-            <!-- Password input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="passwordinput">Password</label>
-                <div class="col-md-4">
-                    <input id="passwordinput" name="passwordinput" type="password" placeholder="************" class="form-control input-md" data-minlength="8" required>
-
-                </div>
-            </div>
-
-            <!-- Password input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="passwordinput2">Re-Enter Password</label>
-                <div class="col-md-4">
-                    <input id="passwordinput2" name="passwordinput2" type="password" placeholder="************" class="form-control input-md" data-minlength="8" required>
-
-                </div>
-            </div>
-
-            <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="singlebutton"></label>
-                <div class="col-md-4">
-                    <button id="registerButton" name="singlebutton" class="btn btn-primary">Sign Up</button>
-                </div>
-            </div>
-
-        </fieldset>
-    </form>
-</div>
 
