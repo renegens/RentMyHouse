@@ -1,9 +1,36 @@
 <?php
-include "head.php";
+include ("head.php");
+require_once "recaptchalib.php";
 
+// Register API keys at https://www.google.com/recaptcha/admin
+$siteKey = "6LdvOwcTAAAAALnjBZyMAYeV_as64PthTkmmA75r";
+$secret = "6LdvOwcTAAAAAM-m5VNF53WQKIYo6GuEDoHLljjJ";
+// reCAPTCHA supported 40+ languages listed here: https://developers.google.com/recaptcha/docs/language
+$lang = "en";
 
+// The response from reCAPTCHA
+$resp = null;
+// The error code from reCAPTCHA, if any
+$error = null;
 
+$reCaptcha = new ReCaptcha($secret);
+
+// Was there a reCAPTCHA response?
+if ($_POST["g-recaptcha-response"]) {
+    $resp = $reCaptcha->verifyResponse(
+        $_SERVER["127.0.1"],
+        $_POST["g-recaptcha-response"]
+    );
+}
 ?>
+
+    <?php
+    if ($resp != null && $resp->success) {
+        echo "You got it!";
+    }
+    ?>
+
+
     <!-------------------NAVIGATION--------------------------->
     <!--====================================================-->
 
@@ -39,7 +66,7 @@ include "head.php";
     <br>
     <div class="well col-lg-4 col-lg-offset-4">
         <h3>Sign Up</h3>
-        <form data-toggle="validator" role="form" method="post" action="con_register.php">
+        <form data-toggle="validator" id="signUpForm" role="form" method="post" action="con_register.php">
             <div class="form-group">
                 <label for="inputName" class="control-label">Username</label>
                 <input type="text" class="form-control" id="inputName" name="username" placeholder="username" maxlength="20" required>
@@ -61,11 +88,19 @@ include "head.php";
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
+            <div class="g-recaptcha form-group" data-sitekey="<?php echo $siteKey;?> " required></div>
+
+            <script type="text/javascript"
+                    src="https://www.google.com/recaptcha/api.js?hl=<?php echo $lang;?>">
+            </script>
+
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
     </div>
 </div>
+
+
 
 <?php include "footer.php"; ?>
