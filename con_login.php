@@ -38,7 +38,9 @@
         if($login_ok){
             unset($row['salt']);
             unset($row['password']);
+            //to fix
             $_SESSION['user'] = $row;
+            $_SESSION['username'] = $row['username'];
             $_SESSION["loggedIn"] = true;
             header("Location: secret.php");
             die("Redirecting to: secret.php");

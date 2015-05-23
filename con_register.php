@@ -1,6 +1,10 @@
 <?php
 require("config.php");
 
+//check captcha - send to error.php if failed to match
+    if ( $_SESSION['security_code'] !== $_POST['captcha'] ) { unset($_SESSION['security_code']);
+    header("Location: register.php?msg=Captcha do not match! Please retry.");
+        exit();}
 
 if(!empty($_POST))
 {
@@ -11,6 +15,8 @@ if(!empty($_POST))
     { die("Please enter a password."); }
     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
     { die("Invalid E-Mail Address"); }
+    if(empty($_POST['captcha']))
+    { die("Invalid Captcha"); }
 
     // Check if the username is already taken
     $query = " 
@@ -61,16 +67,10 @@ if(!empty($_POST))
             ) 
         ";
 
-    // generate a 16-character salt string
-    $salt = substr(str_replace('+','.',base64_encode(md5(mt_rand(), true))),0,16);
-    // how many times the string will be hashed
-    $rounds = 10000;
-    $password = hash('sha512', $_POST['password'] . $salt);
-
     // Security measures
-    //$salt = dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647));
-    //$password = hash('sha256', $_POST['password'] . $salt);
-    for($round = 0; $round < 65536; $round++){ $password = hash('sha512', $password . $salt); }
+    $salt = dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647));
+    $password = hash('sha256', $_POST['password'] . $salt);
+    for($round = 0; $round < 65536; $round++){ $password = hash('sha256', $password . $salt); }
     $query_params = array(
         ':username' => $_POST['username'],
         ':password' => $password,

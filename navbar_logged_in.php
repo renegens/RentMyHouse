@@ -8,9 +8,9 @@
 
 ?>
 
+    <div class="container">
+        <div class="navbar-header navbar-right">
 
-<ul class="nav navbar-nav navbar-right">
-    <li>Hi, <?php echo $_SESSION['username']?></li>
-    <li><a href="logout.php">Logout</a></li>
-</ul>
-
+        <p class="navbar-text pull-right">Hi, <?php echo $_SESSION['username']?> | <a class="btn-success" href="logout.php">Log Out</a></p>
+    </div>
+</div>
