@@ -2,7 +2,7 @@
 
 $host="localhost"; // Host name 
 $username="root"; // Mysql username
-$password="root"; // Mysql password
+$password=""; // Mysql password
 $dbname="rentmyhouse"; // Database name
 
 
