@@ -1,0 +1,23 @@
+.navbar {
+    margin-bottom: 0;
+}
+
+.container > .row {
+    padding: 50px 0;
+}
+
+/* Login Form
+======================== */
+.login-menu {
+    padding: 15px;
+    padding-bottom: 0px;
+}
+
+.navbar-default {
+     background-color: #008080; !important;
+     border-color: #008080; !important;
+ }
+.navbar {
+    background-color: #008080; !important;
+    border-color: #008080; !important;
+}

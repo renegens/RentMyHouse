@@ -49,6 +49,15 @@ include("head.php");
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
+            <form class="navbar-form navbar-left" action="con_styles.php" method="get">
+                    <select class="form-control" onchange="if(this.value)window.location.href=this.value">
+
+                        <option value="?css=<?php echo $default;?>">Default</option>
+                        <option value="?css=<?php echo $custom;?>">Holiday</option>
+
+                    </select>
+
+            </form>
 
             <!--Logic to display different nav bar to user when logged in -->
             <?php if (($_SESSION['loggedIn']==true)) {

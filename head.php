@@ -1,11 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: renegens
- * Date: 5/18/15
- * Time: 14:48
- */
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +9,12 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <?php
+    require("con_styles.php")
+    ?>
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Change this to make  <link rel="stylesheet" href="css/style.css">  custom css to work with con_styles -->
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

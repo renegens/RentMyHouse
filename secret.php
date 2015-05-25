@@ -6,7 +6,6 @@
         header("Location: index.php");
         die("Redirecting to index.php");
     }
-//http://getbootstrap.com/css/#forms
 include "head.php";
 ?>
     <body>
@@ -74,9 +73,9 @@ include "head.php";
 
                 <!-- Select Multiple -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="nomos">Select State</label>
+                    <label class="col-md-4 control-label" for="state">Select State</label>
                     <div class="col-md-5">
-                        <select id="nomos" name="nomos" class="form-control" multiple="multiple">
+                        <select id="state" name="state" class="form-control" multiple="multiple">
                             <option value="1">Thraki</option>
                             <option value="2">Makedonia</option>
                             <option value="3">Thessalia</option>
@@ -180,9 +179,9 @@ include "head.php";
 
                 <!-- Textarea -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="comments">Notes</label>
+                    <label class="col-md-4 control-label" for="description">Notes</label>
                     <div class="col-md-4">
-                        <textarea class="form-control" id="comments" name="comments">A beautiful house by the sea..</textarea>
+                        <textarea class="form-control" id="description" name="description">A beautiful house by the sea..</textarea>
                     </div>
                 </div>
 
@@ -196,9 +195,9 @@ include "head.php";
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="longtitute">Longtitude</label>
+                    <label class="col-md-4 control-label" for="longitude">Longitude</label>
                     <div class="col-md-5">
-                        <input id="longtitute" name="longtitute" type="text" placeholder="35.6938203" class="form-control input-md" required="">
+                        <input id="longitude" name="longitude" type="text" placeholder="35.6938203" class="form-control input-md" required="">
 
                     </div>
                 </div>

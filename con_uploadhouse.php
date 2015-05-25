@@ -3,25 +3,18 @@
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
 
-    $garage = 0;
     $wifi = 0;
     $pool = 0;
-    $jacuzzi = 0;
-    $spa = 0;
-    $gym = 0;
+    $maid = 0;
     $comments = "";
-    if (isset($_FILES['mainphoto'])) {
+
+    //To do check image upload
+    /*if (isset($_FILES['mainphoto'])) {
         $filename = $_FILES['mainphoto']['name'];
         $ext = strtolower(substr($filename, -3));
         $new_filename = uniqid("villasprifileimage-", true) . '.' . $ext;
         $copied = copy($_FILES['mainphoto']['tmp_name'], 'villasprofileimages/' . $new_filename);
-    }
-
-
-
-    if (isset($_POST['garage'])) {
-        $garage = 1;
-    }
+    }*/
 
 
     if (isset($_POST['wifi'])) {
@@ -35,48 +28,35 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
     }
 
 
-    if (isset($_POST['jacuzzi'])) {
-        $jacuzzi = 1;
+    if (isset($_POST['maid'])) {
+        $maid = 1;
     }
 
-    if (isset($_POST['spa'])) {
-        $spa = 1;
-    }
-
-    if (isset($_POST['gym'])) {
-        $gym = 1;
-    }
-
-    if (isset($_POST['comments'])) {
-        $comments = $_POST['comments'];
+    if (isset($_POST['description'])) {
+        $description = $_POST['description'];
     }
 
     try {
         require('config.php');
         $pdoObject = new PDO("mysql:host=$dbhost; dbname=$dbname;", $dbuser, $dbpass);
         $pdoObject->exec('set names utf8');
-        $sql = 'INSERT INTO houses (houseName,area,address,addressNumber,postalCode,coords,telephone,mobilePhone,squareMeter,price,capacity,garage,wifi,pool,jacuzzi,spa,gym,rating,villasDescr,mainImageName,users_username)
-            VALUES (:housesname,:area,:address,:addressnumber,:postalcode,:coords,:telephone,:mobilephone,:squaremeter,:price,:capacity,:garage,:wifi,:pool,:jacuzzi,:spa,:gym,:rating,:villadescr,:imagename,:username)';
+        $sql = 'INSERT INTO houses
+            (name,state,address,telephone,size,price,maid,wifi,pool,stars,description,longitude,latitude,imageName,userUsername)
+              VALUES (:housesname,:state,:address,:telephone,:size,:price,:wifi,:pool,:maid,:stars,:description,:imageName,:userUsername)';
         $statement = $pdoObject->prepare($sql);
-        $myResult = $statement->execute(array(':villasname' => $_POST['housename'],
-            ':area' => $_POST['area'],
+        $myResult = $statement->execute(array(':housesname' => $_POST['housename'],
+            ':state' => $_POST['state'],
             ':address' => $_POST['address'],
-            ':addressnumber' => $_POST['addressno'],
-            ':postalcode' => $_POST['postalcode'],
-            ':coords' => $_POST['coords'],
+            ':longitude' => $_POST['longitude'],
+            ':latitude' => $_POST['latitude'],
             ':telephone' => $_POST['telephone'],
-            ':mobilephone' => $_POST['mobilephone'],
-            ':squaremeter' => $_POST['squaremeter'],
+            ':size' => $_POST['size'],
             ':price' => $_POST['price'],
-            ':capacity' => $_POST['capacity'],
-            ':garage' => $garage,
+            ':maid' => $maid,
             ':wifi' => $wifi,
             ':pool' => $pool,
-            ':jacuzzi' => $jacuzzi,
-            ':spa' => $spa,
-            ':gym' => $gym,
-            ':rating' => $_POST['rating'],
-            ':villadescr' => $comments,
+            ':stars' => $_POST['stars'],
+            ':description' => $description,
             ':imagename' => $new_filename,
             ':username' => $_SESSION['username']));
         $statement->closeCursor();
