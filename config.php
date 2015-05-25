@@ -1,8 +1,8 @@
 <?php
 
 $host="localhost"; // Host name 
-$username="root"; // Mysql username
-$password=""; // Mysql password
+$username="admin"; // Mysql username
+$password="admin"; // Mysql password no password for windows root password for mac
 $dbname="rentmyhouse"; // Database name
 
 

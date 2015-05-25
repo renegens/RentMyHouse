@@ -55,213 +55,175 @@ include "head.php";
         </div>
     </nav>
 
-    <div class="well-lg">
-        <h2>Admin Panel</h2>
-        <form id="houseform" name="houseform"  enctype="multipart/form-data" action="uploadvillahandler.php" method="POST">
-            <table style="width:100%;">
+    <div class="col-lg-offset-3">
+        <h2 class="text-center">Admin Panel</h2>
+        <form class="form-horizontal">
+            <fieldset>
 
-                <tr>
-                    <td width="25%">&nbsp</td>
-                    <td style = "font-size: 1.2em;"><em>Τα πεδία με * είναι υποχρεωτικά!</em></td>
+                <!-- Form Name -->
+                <legend class="text-center">Upload your house info</legend>
 
-                </tr>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="housename">House Name</label>
+                    <div class="col-md-5">
+                        <input id="housename" name="housename" type="text" placeholder="House at sea" class="form-control input-md" required="">
 
-                <tr><td></td></tr>
-                <tr><td></td></tr>
-                <tr><td></td></tr>
-                <tr>
-                    <td class="right" style = "padding: 0 0 25px 60px; font-size: 1.2em;">* Όνομα Βίλας</td>
-                    <td><input style="width: 215px; height: 17px; " class="inputs" type="text" id="villaname" name="villaname" size="25" maxlength="25"></td>
-                </tr>
+                    </div>
+                </div>
 
-                <tr>
-                    <td class="right"  style = "padding: 0 0 25px 75px; font-size: 1.2em;">* Νομός</td>
-                    <td>
-                        <select style="width: 235px; font-size: 1em; height: 30px; " class="inputs" id="area" name="area">
-                            <option value="-1" style="color:red;" selected="selected">--Επιλέξτε Νομό--</option>
-                            <optgroup label="Θράκη">
-                                <option value="Θράκη-Έβρος-Αλεξανδρούπολη">Ν.Έβρου - Αλεξανδρούπολη</option>
-                                <option value="Θράκη-Ροδόπη-Κομοτηνή">Ν.Ροδόπης - Κομοτηνή</option>
-                                <option value="Θράκη-Ξάνθη">Ν.Ξάνθης - Ξάνθη</option>
-                            </optgroup>
-                            <optgroup label="Μακεδόνια">
-                                <option value="Μακεδονία-Καβάλα">Ν.Καβάλας - Καβάλα</option>
-                                <option value="Μακεδονία-Δράμα">Ν.Δράμας - Δράμα</option>
-                                <option value="Μακεδονία-Σέρρες">Ν.Σερρών - Σέρρες</option>
-                                <option value="Μακεδονία-Κιλκίς">Ν.Κιλκίς - Κιλκίς</option>
-                                <option value="Μακεδονία-Θεσσαλονίκη">Ν.Θεσσαλονίκης - Θεσσαλονίκη</option>
-                                <option value="Μακεδονία-Χαλκιδική-Πολύγυρος">Ν.Χαλκιδικής - Πολύγυρος</option>
-                                <option value="Μακεδονία-Πέλλα-Έδεσσα">Ν.Πέλλης - Έδεσσα</option>
-                                <option value="Μακεδονία-Ημαθία-Βέροια">Ν.Ημαθίας - Βέροια</option>
-                                <option value="Μακεδονία-Φλώρινα">Ν.Φλώρινας - Φλώρινα</option>
-                                <option value="Μακεδονία-Κοζάνη">Ν.Κοζάνης - Κοζάνη</option>
-                                <option value="Μακεδονία-Καστοριά">Ν.Καστοριάς - Καστοριά</option>
-                                <option value="Μακεδονία-Πιερία-Κατερίνη">Ν.Πιερίας - Κατερίνη</option>
-                                <option value="Μακεδονία-Γρεβενά">Ν.Γρεβενών - Γρεβενά</option>
-                            </optgroup>
-                            <optgroup label="Θεσσαλία">
-                                <option value="Θεσσαλία-Λάρισα">Ν.Λαρίσης - Λάρισα</option>
-                                <option value="Θεσσαλία-Μαγνησία-Βόλος">Ν.Μαγνησίας - Βόλος</option>
-                                <option value="Θεσσαλία-Καρδίτσα">Ν.Καρδίτσας - Καρδίτσα</option>
-                                <option value="Θεσσαλία-Τρίκαλα">Ν.Τρικάλων - Τρίκαλα</option>
-                            </optgroup>
-                            <optgroup label="Ήπειρος">
-                                <option value="Ήπειρος-Ιωάννινα">Ν.Ιωαννίνων - Ιωάννινα</option>
-                                <option value="Ήπειρος-Θεσπρωτία-Ηγουμενίτσα">Ν.Θεσπρωτίας - Ηγουμενίτσα</option>
-                                <option value="Ήπειρος-Πρέβεζα">Ν.Πρεβέζης - Πρέβεζα</option>
-                                <option value="Ήπειρος-Άρτα">Ν.Άρτης - Άρτα</option>
-                            </optgroup>
-                            <optgroup label="Στερεά Ελλάδα">
-                                <option value="Στερεά Ελλάδα-Αττική-Αθήνα">Ν.Αττικής - Αθήνα</option>
-                                <option value="Στερεά Ελλάδα-Βοιωτία-Λιβαδιά">Ν.Βοιωτίας - Λιβαδιά</option>
-                                <option value="Στερεά Ελλάδα-Φθιώτιδα-Λαμία">Ν.Φθιώτιδα - Λαμία</option>
-                                <option value="Στερεά Ελλάδα-Φωκίδα-Άμφισσα">Ν.Φωκίδας - Άμφισσα</option>
-                                <option value="Στερεά Ελλάδα-Αιτωλοακαρνανία-Μεσολόγγι">Ν.Αιτωλοακαρνανίας - Μεσολόγγι</option>
-                                <option value="Στερεά Ελλάδα-Ευρυτανία-Καρπενήσι">Ν.Ευρυτανίας - Καρπενήσι</option>
-                                <option value="Στερεά Ελλάδα-Εύβοια-Χαλκίδα">Ν.Ευβοίας - Χαλκίδα</option>
-                            </optgroup>
-                            <optgroup label="Πελοπόννησος">
-                                <option value="Πελοπόννησος-Κόρινθος">Ν.Κορινθίας - Κόρινθος</option>
-                                <option value="Πελοπόννησος-Αχαΐα-Πάτρα">Ν.Αχαΐας - Πάτρα</option>
-                                <option value="Πελοπόννησος-Ηλεία-Πύργος">Ν.Ηλείας - Πύργος</option>
-                                <option value="Πελοπόννησος-Αρκαδία-Τρίπολη">Ν.Αρκαδίας - Τρίπολη</option>
-                                <option value="Πελοπόννησος-Αργολίδα-Ναύπλιο">Ν.Αργολίδος - Ναύπλιο</option>
-                                <option value="Πελοπόννησος-Μεσσηνία-Καλαμάτα">Ν.Μεσσηνίας - Καλαμάτα</option>
-                                <option value="Πελοπόννησος-Λακωνία-Σπάρτη">Ν.Λακωνίας - Σπάρτη</option>
-                            </optgroup>
-
-                            <optgroup label="Νησιά Αιγαίου">
-
-                                <option value="Αιγαίο-Λέσβος">Λέσβος</option>
-                                <option value="Αιγαίο-Χίος">Χίος</option>
-                                <option value="Αιγαίο-Σάμος">Σάμος</option>
-                                <option value="Αιγαίο-Λήμνος">Λήμνος</option>
-                                <option value="Αιγαίο-Θάσος">Θάσος</option>
-                                <option value="Αιγαίο-Ικαρία">Ικαρία</option>
-                                <option value="Αιγαίο-Σκιάθος">Σκιάθος</option>
-                                <option value="Αιγαίο-Σκόπελος">Σκόπελο</option>
-                                <option value="Αιγαίο-Σπέτσες">Σπέτσες</option>
-                                <option value="Αιγαίο-Ύδρα">Ύδρα</option>
-                                <option value="Αιγαίο-Σύρος">Σύρος</option>
-                                <option value="Αιγαίο-Κυκλάδες-Νάξος">Νάξος</option>
-                                <option value="Αιγαίο-Κυκλάδες-Σαντορίνη">Σαντορίνη</option>
-                                <option value="Αιγαίο-Κυκλάδες-Πάρος">Πάρος</option>
-                                <option value="Αιγαίο-Κυκλάδες-Μύκονος">Μύκονος</option>
-                                <option value="Αιγαίο-Κυκλάδες-Φολέγανδρος">Φολέγανδρος</option>
-                                <option value="Αιγαίο-Δωδεκάνησα-Ρόδος">Ρόδος</option>
-                                <option value="Αιγαίο-Δωδεκάνησα-Κως">Κώς</option>
-                                <option value="Αιγαίο-Δωδεκάνησα-Κάλυμνος">Κάλυμνος</option>
-                                <option value="Αιγαίο-Δωδεκάνησα-Κάρπαθος">Κάρπαθος</option>
-                                <option value="Αιγαίο-Δωδεκάνησα-Πάτμος">Πάτμος</option>
-                                <option value="Αιγαίο-Δωδεκάνησα-Αστυπάλαια">Αστυπάλαια</option>
-                            </optgroup>
-
-                            <optgroup label="Νησιά Ιονίου">
-                                <option value="Ιόνιο-Κέρκυρα">Κέρκυρα</option>
-                                <option value="Ιόνιο-Ζάκυνθος">Ζάκυνθος</option>
-                                <option value="Ιόνιο-Κεφαλονιά">Κεφαλονία</option>
-                                <option value="Ιόνιο-Λευκάδα">Λευκάδα</option>
-                                <option value="Ιόνιο-Κύθυρα">Κύθυρα</option>
-                                <option value="Ιόνιο-Ιθάκη">Ιθάκη</option>
-                                <option value="Ιόνιο-Παξούς">Παξούς</option>
-                            </optgroup>
-
-                            <optgroup label="Κρήτη">
-                                <option value="Αιγαίο-Κρήτη-Χανιά">Ν.Χανιών - Χανιά</option>
-                                <option value="Αιγαίο-Κρήτη-Ρέθυμνο">Ν.Ρεθύμνης - Ρέθυμνο</option>
-                                <option value="Αιγαίο-Κρήτη-Ηράκλειο">Ν.Ηρακλείου - Ηράκλειο</option>
-                                <option value="Αιγαίο-Κρήτη-Λασίθι-Άγιος Νικόλαος">Ν.Λασιθίου - Άγιος Νικόλαος</option>
-                            </optgroup>
+                <!-- Select Multiple -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nomos">Select State</label>
+                    <div class="col-md-5">
+                        <select id="nomos" name="nomos" class="form-control" multiple="multiple">
+                            <option value="1">Thraki</option>
+                            <option value="2">Makedonia</option>
+                            <option value="3">Thessalia</option>
+                            <option value="4">Hpeiros</option>
+                            <option value="5">Sterea Ellada</option>
+                            <option value="6">Peloponissos</option>
+                            <option value="7">Nisia Aigaiou</option>
+                            <option value="8">Nisia Iouniou</option>
+                            <option value="9">Kriti</option>
                         </select>
-                    </td>
-                </tr>
+                    </div>
+                </div>
 
-                <tr>
-                    <td class="right" style = "padding: 0 0 25px 75px; font-size: 1.2em;">* Διεύθυνση</td>
-                    <td><input style="width: 215px; height: 17px; " class="inputs" type="text" id="address" name="address" size="25" maxlength="25"> <input style="width: 30px; height: 17px;" class="inputs" type="text" id="addressno" name="addressno" size="3" maxlength="3"></td>
-                </tr>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="address">Adress</label>
+                    <div class="col-md-5">
+                        <input id="address" name="address" type="text" placeholder="Panagouli 7" class="form-control input-md" required="">
 
-                <tr>
-                    <td class="right" style = "padding: 0 0 25px 95px; font-size: 1.2em;">* Τ.Κ</td>
-                    <td><input class="inputs" style="width: 80px; height: 17px;  " type="text" id="postalcode" name="postalcode" size="25" maxlength="25"></td>
-                </tr>
+                    </div>
+                </div>
 
-                <tr>
-                    <td class="right" style = "padding: 0 0 25px 95px; font-size: 1.2em;">* Τιμή</td>
-                    <td><input class="inputs" style="width: 65px; height: 17px; " type="text" id="price" name="price" size="7" maxlength="7">&nbsp;&euro;</td>
-                </tr>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="price">Price</label>
+                    <div class="col-md-5">
+                        <input id="price" name="price" type="text" placeholder="€" class="form-control input-md" required="">
 
-                <tr>
-                    <td class="right" style = "padding: 0 0 25px 20px; font-size: 1.2em;">* Τετραγωνικά μέτρα</td>
-                    <td><input class="inputs" style="width: 65px; height: 17px; " type="text" id="squaremeter" name="squaremeter" size="4" maxlength="4">&nbsp;τετρ. μέτρα</td>
-                </tr>
+                    </div>
+                </div>
 
-                <tr>
-                    <td class="right" style = "padding: 0 0 25px 75px; font-size: 1.2em;">* Τηλέφωνο</td>
-                    <td><input class="inputs" style="width: 95px; height: 17px; " type="text" id="telephone" name="telephone" size="10" maxlength="10"></td>
-                </tr>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="size">Square Meter</label>
+                    <div class="col-md-5">
+                        <input id="size" name="size" type="text" placeholder="42m^2" class="form-control input-md" required="">
 
-                <tr>
-                    <td class="right" style = "padding: 0 0 25px 40px; font-size: 1.2em;">Κινητό Τηλέφωνο</td>
-                    <td><input class="inputs" style="width: 95px; height: 17px; " type="text" id="mobilephone" name="mobilephone" size="10" maxlength="10"></td>
-                </tr>
+                    </div>
+                </div>
 
-                <tr>
-                    <td class="right" style = "padding: 0 0 25px 55px; font-size: 1.2em;">* Χωρητικότητα</td>
-                    <td><input class="inputs" style="width: 35px; height: 17px; " type="text" id="capacity" name="capacity" size="3" maxlength="3">&nbsp;άτομα</td>
-                </tr>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="telephone">Telephone</label>
+                    <div class="col-md-5">
+                        <input id="telephone" name="telephone" type="text" placeholder="6973291041" class="form-control input-md" required="">
 
-                <tr>
-                    <td class="right" style = "padding: 20px 0 25px 50px; font-size: 1.2em;">* Εγκαταστάσεις</td>
-                    <td>
-                        <label><input type="checkbox" id="garage" name="garage" value="1" >Γκαράζ</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <label><input type="checkbox" id="wifi" name="wifi" value="1" >Wi-Fi</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <label><input type="checkbox" id="pool" name="pool" value="1" >Πισίνα</label>
-                        <br/><br/>
-                        <label><input type="checkbox" id="jacuzzi" name="jacuzzi" value="1" >Τζακούζι</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <label><input type="checkbox" id="spa" name="spa" value="1" >Spa</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <label><input type="checkbox" id="gym" name="gym" value="1" >Γυμναστήριο</label>
+                    </div>
+                </div>
 
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="right" style = "padding: 20px 0 25px 75px; font-size: 1.2em;">* Αστέρων</td>
-                    <td>
-                        <div class="rating">
-                            <input type="radio" name="rating" value="0" checked /><span id="hide"></span>
-                            <input type="radio" name="rating" value="1" /><span></span>
-                            <input type="radio" name="rating" value="2" /><span></span>
-                            <input type="radio" name="rating" value="3" /><span></span>
+                <!-- Multiple Checkboxes -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="comforts">Comforts</label>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label for="comforts-0">
+                                <input type="checkbox" name="comforts" id="comforts-0" value="1">
+                                Wifi
+                            </label>
                         </div>
-                    </td>
-                </tr>
+                        <div class="checkbox">
+                            <label for="comforts-1">
+                                <input type="checkbox" name="comforts" id="comforts-1" value="2">
+                                Pool
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="comforts-2">
+                                <input type="checkbox" name="comforts" id="comforts-2" value="3">
+                                Maid
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
-                <tr>
-                    <td class="right" style = "padding: 10px 0 90px 90px; font-size: 1.2em;">Επιπλέον Περιγραφή</td>
-                    <td>
-                        <textarea class="inputs" style="margin-bottom: 0;" id="comments" name="comments" rows="5" onkeyup="check_limit('comments', 150, 'chars_left_counter');"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="right" style = "padding: 0 0 25px 70px; font-size: 1.2em;">* Κύρια Φωτογραφία</td>
-                    <td><input class="custom-file-input" accept="image/jpeg" style="margin-bottom: 20px;" name="mainphoto" id="mainphoto" type="file" value="Browse.."></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input class="btn"  type="button" value="Πρόσθεσε στον χάρτη"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input class="btn"  type="submit" value="Καταχώρηση"></td>
-                </tr>
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="stars">Stars</label>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="stars-0">
+                            <input type="radio" name="stars" id="stars-0" value="1" checked="checked">
+                            1
+                        </label>
+                        <label class="radio-inline" for="stars-1">
+                            <input type="radio" name="stars" id="stars-1" value="2">
+                            2
+                        </label>
+                        <label class="radio-inline" for="stars-2">
+                            <input type="radio" name="stars" id="stars-2" value="3">
+                            3
+                        </label>
+                        <label class="radio-inline" for="stars-3">
+                            <input type="radio" name="stars" id="stars-3" value="4">
+                            4
+                        </label>
+                        <label class="radio-inline" for="stars-4">
+                            <input type="radio" name="stars" id="stars-4" value="5">
+                            5
+                        </label>
+                    </div>
+                </div>
 
-            </table>
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="comments">Notes</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="comments" name="comments">A beautiful house by the sea..</textarea>
+                    </div>
+                </div>
+
+                <!-- File Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="image">Upload Image</label>
+                    <div class="col-md-4">
+                        <input id="image" name="image" class="input-file" type="file">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="longtitute">Longtitude</label>
+                    <div class="col-md-5">
+                        <input id="longtitute" name="longtitute" type="text" placeholder="35.6938203" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="latitude">Latitude</label>
+                    <div class="col-md-5">
+                        <input id="latitude" name="latitude" type="text" placeholder="40.53646546" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Button (Double) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-8">
+                        <button id="submit" name="submit" class="btn btn-success">Submit</button>
+                        <button id="clear" name="clear" class="btn btn-default">Clear</button>
+                    </div>
+                </div>
+
+            </fieldset>
         </form>
+
     </div>
 
 

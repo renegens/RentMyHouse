@@ -1,3 +1,13 @@
+-- User admin for sql with username: admin and password: admin with all privileges on
+-- rentmyhouse database
+
+CREATE USER 'admin'@'%' IDENTIFIED BY '***';GRANT USAGE ON *.* TO 'admin'@'%' IDENTIFIED BY '***' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0
+MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+GRANT ALL PRIVILEGES ON `rentmyhouse`.* TO 'admin'@'%';
+
+
+
+
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
