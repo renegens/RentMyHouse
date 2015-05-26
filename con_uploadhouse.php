@@ -16,35 +16,66 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
         $copied = copy($_FILES['mainphoto']['tmp_name'], 'villasprofileimages/' . $new_filename);
     }*/
 
-
     if (isset($_POST['wifi'])) {
         $wifi = 1;
     }
-
 
 
     if (isset($_POST['pool'])) {
         $pool = 1;
     }
 
-
     if (isset($_POST['maid'])) {
         $maid = 1;
     }
-
     if (isset($_POST['description'])) {
         $description = $_POST['description'];
     }
 
+
     try {
         require('config.php');
-        $pdoObject = new PDO("mysql:host=$dbhost; dbname=$dbname;", $dbuser, $dbpass);
-        $pdoObject->exec('set names utf8');
-        $sql = 'INSERT INTO houses
-            (name,state,address,telephone,size,price,maid,wifi,pool,stars,description,longitude,latitude,imageName,userUsername)
-              VALUES (:housesname,:state,:address,:telephone,:size,:price,:wifi,:pool,:maid,:stars,:description,:imageName,:userUsername)';
+        //Connect to server and select database.
+        $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+        try {
+            $pdoObject = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password, $options);
+        }
+        catch(PDOException $ex){
+            die("Failed to connect to the database: " . $ex->getMessage());
+        }
+
+        $sql = 'INSERT INTO houses (
+                  name,
+                  state,
+                  address,
+                  telephone,
+                  size,
+                  price,
+                  maid,
+                  wifi,
+                  pool,
+                  stars,
+                  description,
+                  longitude,
+                  latitude,
+                  imageName
+                  ) VALUES (
+                    :name,
+                    :state,
+                    :address,
+                    :telephone,
+                    :size,
+                    :price,
+                    :wifi,
+                    :pool,
+                    :maid,
+                    :stars,
+                    :description,
+                    :imageName
+                    )';
         $statement = $pdoObject->prepare($sql);
-        $myResult = $statement->execute(array(':housesname' => $_POST['housename'],
+        $myResult = $statement->execute( array(
+            ':name' => $_POST['name'],
             ':state' => $_POST['state'],
             ':address' => $_POST['address'],
             ':longitude' => $_POST['longitude'],
@@ -57,11 +88,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
             ':pool' => $pool,
             ':stars' => $_POST['stars'],
             ':description' => $description,
-            ':imagename' => $new_filename,
-            ':username' => $_SESSION['username']));
+            ':imagename' => $new_filename,)
+        );
         $statement->closeCursor();
         $pdoObject = null;
-    } catch (PDOException $e) {
+    } catch (PDOException $ex) {
         header('Location: index.php?msg=Αδύνατη η σύνδεση με τον server');
         exit();
     }

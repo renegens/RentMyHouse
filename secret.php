@@ -51,12 +51,12 @@ include "head.php";
             </li>
             </ul>
         </div>
-        </div>
+
     </nav>
 
-    <div class="col-lg-offset-3">
+    <div class="col-lg-4 col-lg-offset-4">
         <h2 class="text-center">Admin Panel</h2>
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="post" action="con_uploadhouse.php">
             <fieldset>
 
                 <!-- Form Name -->
