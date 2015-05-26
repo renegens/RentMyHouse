@@ -58,13 +58,13 @@ try {
     exit();
 }?>
 
-<div class="col-lg-4 col-lg-offset-4">
+<div class="col-lg-6 col-lg-offset-2">
     <h2 class="text-center">Admin Panel</h2>
-    <form class="form-horizontal" >
+    <form class="form-horizontal" method="post" action="con_editupload.php" >
         <fieldset>
 
             <!-- Form Name -->
-            <legend class="text-center">Upload your house info</legend>
+            <legend class="text-center">Edit your house info</legend>
 
             <!-- Text input-->
             <div class="form-group">
@@ -81,15 +81,15 @@ try {
                 <div class="col-md-5">
                     <select id="state" name="state" class="form-control" multiple="multiple">
 
-                        <option value="Thraki">Thraki</option>
-                        <option value="Makedonia">Makedonia</option>
-                        <option value="Thessalia">Thessalia</option>
-                        <option value="Hpeiros">Hpeiros</option>
-                        <option value="Sterea Ellada">Sterea Ellada</option>
-                        <option value="Peloponissos">Peloponissos</option>
-                        <option value="Nisia Aigaiou">Nisia Aigaiou</option>
-                        <option value="Nisia Ioniou">Nisia Ioniou</option>
-                        <option value="Kriti">Kriti</option>
+                        <option value="Thraki" <?php if ($state == 'Thraki') echo 'selected="selected"' ?>>Thraki</option>
+                        <option value="Makedonia" <?php if ($state == 'Makedonia') echo 'selected="selected"' ?>>Makedonia</option>
+                        <option value="Thessalia" <?php if ($state == 'Thessalia') echo 'selected="selected"' ?>>Thessalia</option>
+                        <option value="Hpeiros" <?php if ($state == 'Hpeiros') echo 'selected="selected"' ?>>Hpeiros</option>
+                        <option value="Sterea Ellada" <?php if ($state == 'Sterea Ellada') echo 'selected="selected"' ?>>Sterea Ellada</option>
+                        <option value="Peloponissos" <?php if ($state == 'Peloponissos') echo 'selected="selected"' ?>>Peloponissos</option>
+                        <option value="Nisia Aigaiou" <?php if ($state == 'Nisia Aigaiou') echo 'selected="selected"' ?>>Nisia Aigaiou</option>
+                        <option value="Nisia Ioniou" <?php if ($state == 'Nisia Ioniou') echo 'selected="selected"' ?>>Nisia Ioniou</option>
+                        <option value="Kriti" <?php if ($state == 'Kriti') echo 'selected="selected"' ?>>Kriti</option>
                     </select>
                 </div>
             </div>
@@ -136,19 +136,19 @@ try {
                 <div class="col-md-4">
                     <div class="checkbox">
                         <label for="comforts-0">
-                            <input type="checkbox" name="wifi" id="comforts-0" value="1">
+                            <input type="checkbox" name="wifi"<?php if ($wifi == 1) echo 'checked="checked"' ?>id="comforts-0" value="1">
                             Wifi
                         </label>
                     </div>
                     <div class="checkbox">
                         <label for="comforts-1">
-                            <input type="checkbox" name="pool" id="comforts-1" value="1">
+                            <input type="checkbox" name="pool" <?php if ($pool == 1) echo 'checked="checked"' ?>id="comforts-1" value="1">
                             Pool
                         </label>
                     </div>
                     <div class="checkbox">
                         <label for="comforts-2">
-                            <input type="checkbox" name="maid" id="comforts-2" value="1">
+                            <input type="checkbox" name="maid" <?php if ($maid == 1) echo 'checked="checked"' ?> id="comforts-2" value="1">
                             Maid
                         </label>
                     </div>
