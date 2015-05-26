@@ -1,12 +1,125 @@
 <?php
+require("config.php");
 
-session_start();
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
+if(!empty($_POST))
+{
+    // Ensure that the user fills out fields
+    if(empty($_POST['name']))
+    { die("Please enter a house name."); }
+    if(empty($_POST['state']))
+    { die("Please enter a state."); }
+    if(empty($_POST['address']))
+    { die("Please enter an address."); }
+    if(empty($_POST['meter']))
+    { die("Please enter a house size."); }
+    if(empty($_POST['price']))
+    { die("Please enter a price."); }
+    if(empty($_POST['stars']))
+    { die("Please enter a rating."); }
+    if(empty($_POST['description']))
+    { die("Please enter a description."); }
+    if(empty($_POST['longitude']))
+    { die("Please enter a longitude."); }
+    if(empty($_POST['latitude']))
+    { die("Please enter a latitude."); }
+    if(empty($_POST['wifi']))
+    {$wifi = 0;}
+    else $wifi = 1;
+    if(empty($_POST['pool']))
+    {$pool = 0;}
+    else $wifi = 1;
+    if(empty($_POST['maid']))
+    {$maid = 0;}
+    else $maid = 1;
 
-    $wifi = 0;
-    $pool = 0;
-    $maid = 0;
-    $comments = "";
+
+
+    //Check for username to be same with session
+    //get session username
+
+    if(empty($_SESSION['username'])) exit();
+
+
+
+    // Check if the house is already taken
+    $query = "
+            SELECT
+                1
+            FROM houses
+            WHERE
+                name = :name
+        ";
+    $query_params = array( ':name' => $_POST['name'] );
+    try {
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    }
+    catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+    $row = $stmt->fetch();
+    if($row){ die("This housename is already in use"); }
+
+
+    // Add row to database
+    // to do add imageName to both
+    $query = "
+            INSERT INTO houses (
+                  name,
+                  state,
+                  address,
+                  meter,
+                  price,
+                  telephone,
+                  wifi,
+                  pool,
+                  maid,
+                  description,
+                  stars,
+                  longitude,
+                  latitude,
+                  username
+
+                  ) VALUES (
+                    :name,
+                    :state,
+                    :address,
+                    :meter,
+                    :price,
+                    :telephone,
+                    :wifi,
+                    :pool,
+                    :maid,
+                    :description,
+                    :stars,
+                    :longitude,
+                    :latitude,
+                    :username
+                     )
+        ";
+
+
+    $query_params = array(
+        ':name' => $_POST['name'],
+        ':state' => $_POST['state'],
+        ':address' => $_POST['address'],
+        ':meter' => $_POST['meter'],
+        ':price' => $_POST['price'],
+        ':telephone' => $_POST['telephone'],
+        ':wifi' => $wifi,
+        ':pool' => $pool,
+        ':maid' => $maid,
+        ':description' => $_POST['description'],
+        ':stars' => $_POST['stars'],
+        ':longitude' => $_POST['longitude'],
+        ':latitude' => $_POST['latitude'],
+        ':username' => $_SESSION['username']
+    );
+    try {
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    }
+    catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+    header("Location: index.php?msg=Data Entry Success");
+    die("Redirecting to index.php");
 
     //To do check image upload
     /*if (isset($_FILES['mainphoto'])) {
@@ -16,88 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
         $copied = copy($_FILES['mainphoto']['tmp_name'], 'villasprofileimages/' . $new_filename);
     }*/
 
-    if (isset($_POST['wifi'])) {
-        $wifi = 1;
-    }
-
-
-    if (isset($_POST['pool'])) {
-        $pool = 1;
-    }
-
-    if (isset($_POST['maid'])) {
-        $maid = 1;
-    }
-    if (isset($_POST['description'])) {
-        $description = $_POST['description'];
-    }
-
-
-    try {
-        require('config.php');
-        //Connect to server and select database.
-        $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
-        try {
-            $pdoObject = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password, $options);
-        }
-        catch(PDOException $ex){
-            die("Failed to connect to the database: " . $ex->getMessage());
-        }
-
-        $sql = 'INSERT INTO houses (
-                  name,
-                  state,
-                  address,
-                  telephone,
-                  size,
-                  price,
-                  maid,
-                  wifi,
-                  pool,
-                  stars,
-                  description,
-                  longitude,
-                  latitude,
-                  imageName
-                  ) VALUES (
-                    :name,
-                    :state,
-                    :address,
-                    :telephone,
-                    :size,
-                    :price,
-                    :wifi,
-                    :pool,
-                    :maid,
-                    :stars,
-                    :description,
-                    :imageName
-                    )';
-        $statement = $pdoObject->prepare($sql);
-        $myResult = $statement->execute( array(
-            ':name' => $_POST['name'],
-            ':state' => $_POST['state'],
-            ':address' => $_POST['address'],
-            ':longitude' => $_POST['longitude'],
-            ':latitude' => $_POST['latitude'],
-            ':telephone' => $_POST['telephone'],
-            ':size' => $_POST['size'],
-            ':price' => $_POST['price'],
-            ':maid' => $maid,
-            ':wifi' => $wifi,
-            ':pool' => $pool,
-            ':stars' => $_POST['stars'],
-            ':description' => $description,
-            ':imagename' => $new_filename,)
-        );
-        $statement->closeCursor();
-        $pdoObject = null;
-    } catch (PDOException $ex) {
-        header('Location: index.php?msg=Αδύνατη η σύνδεση με τον server');
-        exit();
-    }
-
-    if ($myResult) {
+    if ($query_params) {
         header('Location: secret.php?msg=success');
         exit();
     } else {
@@ -107,6 +139,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
 } else {
     header('Location: secret.php?msg=wrong data');
     exit();
+
 }
 ?>
+
 
