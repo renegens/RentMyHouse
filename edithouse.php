@@ -26,8 +26,9 @@ try {
 catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
 $row = $stmt->fetch();
 if($row){ $userid=$row['id']; }
+//die('Location: index.php?msg='.$userid);
 
-$query = 'SELECT * FROM houses WHERE user_id="'.$userid.'";';
+$query = "SELECT * FROM houses WHERE users_id= ".$userid;
 
 try {
     $statement = $db->prepare($query);
@@ -59,7 +60,7 @@ try {
 
 <div class="col-lg-4 col-lg-offset-4">
     <h2 class="text-center">Admin Panel</h2>
-    <form class="form-horizontal" method="post" action="con_edithouse.php">
+    <form class="form-horizontal" >
         <fieldset>
 
             <!-- Form Name -->
