@@ -1,6 +1,6 @@
 <?php
 
-
+require "config.php";
 if(empty($_SESSION['username']))
 {
     header("Location: index.php");
@@ -8,15 +8,30 @@ if(empty($_SESSION['username']))
 }
 require "head.php";
 require "navbar.php";
-require "config.php";
 
+$userid=-1;
+// Check if the house is already taken
+$query = "
+            SELECT
+                id
+            FROM users
+            WHERE
+                username = :user
+        ";
+$query_params = array( ':user' => $_SESSION['username'] );
+try {
+    $stmt = $db->prepare($query);
+    $result = $stmt->execute($query_params);
+}
+catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+$row = $stmt->fetch();
+if($row){ $userid=$row['id']; }
 
-$query = 'SELECT * FROM houses WHERE username=:user;';
+$query = 'SELECT * FROM houses WHERE user_id="'.$userid.'";';
 
 try {
-
-    $stmt = $db->prepare($query);
-    $result->$stmt->execute($query_params);
+    $statement = $db->prepare($query);
+    $statement->execute( array(':username'=>$_SESSION['username'] ) );
 
     if ($row = $statement->fetch()) {
         $name = $row['name'];
@@ -40,14 +55,11 @@ try {
 } catch (PDOException $ex) {
     header('Location: index.php?msg=no-connection-to-server');
     exit();
-}
-
-?>
-
+}?>
 
 <div class="col-lg-4 col-lg-offset-4">
     <h2 class="text-center">Admin Panel</h2>
-    <form class="form-horizontal" method="post" action="con_uploadhouse.php">
+    <form class="form-horizontal" method="post" action="con_edithouse.php">
         <fieldset>
 
             <!-- Form Name -->

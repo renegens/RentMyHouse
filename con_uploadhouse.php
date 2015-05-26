@@ -27,7 +27,7 @@ if(!empty($_POST))
     else $wifi = 1;
     if(empty($_POST['pool']))
     {$pool = 0;}
-    else $wifi = 1;
+    else $pool = 1;
     if(empty($_POST['maid']))
     {$maid = 0;}
     else $maid = 1;
@@ -38,6 +38,24 @@ if(!empty($_POST))
     //get session username
 
     if(empty($_SESSION['username'])) exit();
+    $userid=-1;
+    // Check if the house is already taken
+    $query = "
+            SELECT
+                id
+            FROM users
+            WHERE
+                username = :user
+        ";
+    $query_params = array( ':user' => $_SESSION['username'] );
+    try {
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    }
+    catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+    $row = $stmt->fetch();
+    if($row){ $userid=$row['id']; }
+
 
 
 
@@ -76,7 +94,7 @@ if(!empty($_POST))
                   stars,
                   longitude,
                   latitude,
-                  username
+                  users_id
 
                   ) VALUES (
                     :name,
@@ -96,8 +114,7 @@ if(!empty($_POST))
                      )
         ";
 
-
-    $query_params = array(
+    $query_params =  array (
         ':name' => $_POST['name'],
         ':state' => $_POST['state'],
         ':address' => $_POST['address'],
@@ -111,15 +128,27 @@ if(!empty($_POST))
         ':stars' => $_POST['stars'],
         ':longitude' => $_POST['longitude'],
         ':latitude' => $_POST['latitude'],
-        ':username' => $_SESSION['username']
+        ':username' => $userid
     );
+
     try {
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
+
     }
-    catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+    catch(PDOException $ex) {
+        die("Failed to run query: " . $ex->getMessage());
+    }
+
+
+
     header("Location: index.php?msg=Data Entry Success");
     die("Redirecting to index.php");
+
+
+
+
+
 
     //To do check image upload
     /*if (isset($_FILES['mainphoto'])) {

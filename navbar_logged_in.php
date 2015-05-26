@@ -1,13 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: renegens
- * Date: 5/22/15
- * Time: 00:07
- */
-
-?>
-
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
