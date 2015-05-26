@@ -51,7 +51,7 @@ include("head.php");
             </form>
             <form class="navbar-form navbar-left" action="con_styles.php" method="get">
                     <select class="form-control" onchange="if(this.value)window.location.href=this.value">
-
+                        <option value="">Change Style</option>
                         <option value="?css=<?php echo $default;?>">Default</option>
                         <option value="?css=<?php echo $custom;?>">Holiday</option>
 
