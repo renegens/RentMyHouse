@@ -32,10 +32,13 @@
             </ul>
 
 
-            <form class="navbar-form navbar-left" method="get" action="con_search_simple.php" role="search">
+            <form class="navbar-form navbar-left" method="get" action="searchresults.php" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="simpleSearch" placeholder="Search">
+                    <input type="text" class="form-control" name="simpleSearch" id="keyword" placeholder="Search" list="results" autocomplete="off">
+                    <datalist id="results"> </datalist>
+
                 </div>
+
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <form class="navbar-form navbar-left" action="con_styles.php" method="get">

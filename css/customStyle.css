@@ -12,6 +12,10 @@
     padding: 15px;
     padding-bottom: 0px;
 }
+#map-canvas {
+    width: 100%;
+    height: 50%;
+}
 
 .navbar-default {
      background-color: #008080; !important;
