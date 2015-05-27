@@ -32,9 +32,9 @@
             </ul>
 
 
-            <form class="navbar-form navbar-left" role="search">
+            <form class="navbar-form navbar-left" method="get" action="con_search_simple.php" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" name="simpleSearch" placeholder="Search">
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
