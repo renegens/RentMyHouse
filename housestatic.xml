@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE houses [
+        <!ELEMENT houses (house)*>
+        <!ATTLIST houses
+                count CDATA #REQUIRED>
+        <!ELEMENT house (houseid|name|state|address|price|meter|telephone|wifi|pool|maid|description|stars|longitude|latitude)*>
+        <!ATTLIST house
+                id CDATA #REQUIRED>
+        <!ELEMENT houseid (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT state (#PCDATA)>
+        <!ELEMENT address (#PCDATA)>
+        <!ELEMENT price (#PCDATA)>
+        <!ELEMENT meter (#PCDATA)>
+        <!ELEMENT telephone (#PCDATA)>
+        <!ELEMENT wifi (#PCDATA)>
+        <!ELEMENT pool (#PCDATA)>
+        <!ELEMENT maid (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT stars (#PCDATA)>
+        <!ELEMENT longitude (#PCDATA)>
+        <!ELEMENT latitude (#PCDATA)>
+        ]>
+<houses count="2">
+    <house id="1">
+        <houseid>1</houseid>
+        <name>myHouse</name>
+        <state>Thessalia</state>
+        <address>Ipokratous 7</address>
+        <price>100</price>
+        <meter>35</meter>
+        <telephone>6973291041</telephone>
+        <wifi>1</wifi>
+        <pool>0</pool>
+        <maid>1</maid>
+        <description>House in village</description>
+        <stars>4</stars>
+        <longitude>34.56789</longitude>
+        <latitude>34.8906</latitude>
+    </house>
+
+    <house id="2">
+        <houseid>2</houseid>
+        <name>myHouse2</name>
+        <state>Thraki</state>
+        <address>Panagouli</address>
+        <price>200</price>
+        <meter>70</meter>
+        <telephone>2410567890</telephone>
+        <wifi>0</wifi>
+        <pool>1</pool>
+        <maid>0</maid>
+        <description>House in mountain</description>
+        <stars>2</stars>
+        <longitude>36.56789</longitude>
+        <latitude>36.8906</latitude>
+    </house>
+</houses>
