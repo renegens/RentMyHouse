@@ -21,5 +21,19 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 header('Content-Type: text/html; charset=utf-8');
-session_start();
+function is_session_started()
+{
+    if ( php_sapi_name() !== 'cli' ) {
+        if ( version_compare(phpversion(), '5.4.0', '>=') ) {
+            return session_status() === PHP_SESSION_ACTIVE ? TRUE : FALSE;
+        } else {
+            return session_id() === '' ? FALSE : TRUE;
+        }
+    }
+    return FALSE;
+}
+
+// Example
+if ( is_session_started() === FALSE ) session_start();
+
 ?>

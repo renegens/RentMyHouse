@@ -11,7 +11,7 @@ require("navbar.php");
 ?>
 
 
-<!-------------------CAROUSEL--------------------------->
+<!--                  CAROUSEL                          -->
 <!--====================================================-->
 
 <div id="carousel-top" class="carousel slide" data-ride="carousel">
@@ -55,7 +55,7 @@ require("navbar.php");
     </a>
 </div>
 
-<!-------------------ONE ROW------------------------------>
+<!--                  ONE ROW                           -->
 <!--====================================================-->
 
 
@@ -70,7 +70,7 @@ require("navbar.php");
 </div>
 
 
-<!-------------------IMAGES------------------------------->
+<!--                 IMAGES                             -->
 <!--====================================================-->
 
 <div class="container">
@@ -101,7 +101,7 @@ require("navbar.php");
 </div>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
-<div class="container-fluid" id="map-canvas"></div>
+<div class="container-fluid" style="height: 500px; width: 1000px;" id="map-canvas"></div>
 <script>
     var map;
     function initialize() {
