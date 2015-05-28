@@ -32,54 +32,65 @@ if(!empty($_POST))
     {$maid = 0;}
     else $maid = 1;
 
+    //needs fixing but should work
+    if(is_uploaded_file($_FILES['image']['tmp_name'])) {
+        $folder = "upload/";
+        $file = basename($_FILES['image']['name']);
+        $full_path = $folder . $file;
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $full_path)) {
+            echo "succesful upload, we have an image!";
 
 
-    //Check for username to be same with session
-    //get session username
+            //Check for username to be same with session
+            //get session username
 
-    if(empty($_SESSION['username'])) exit();
-    $userid=-1;
-    // Check if the house is already taken
-    $query = "
+            if (empty($_SESSION['username'])) exit();
+            $userid = -1;
+            // Check if the house is already taken
+            $query = "
             SELECT
                 id
             FROM users
             WHERE
                 username = :user
         ";
-    $query_params = array( ':user' => $_SESSION['username'] );
-    try {
-        $stmt = $db->prepare($query);
-        $result = $stmt->execute($query_params);
-    }
-    catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
-    $row = $stmt->fetch();
-    if($row){ $userid=$row['id']; }
+            $query_params = array(':user' => $_SESSION['username']);
+            try {
+                $stmt = $db->prepare($query);
+                $result = $stmt->execute($query_params);
+            } catch (PDOException $ex) {
+                die("Failed to run query: " . $ex->getMessage());
+            }
+            $row = $stmt->fetch();
+            if ($row) {
+                $userid = $row['id'];
+            }
 
 
-
-
-    // Check if the house is already taken
-    $query = "
+            // Check if the house is already taken
+            $query = "
             SELECT
                 1
             FROM houses
             WHERE
                 name = :name
         ";
-    $query_params = array( ':name' => $_POST['name'] );
-    try {
-        $stmt = $db->prepare($query);
-        $result = $stmt->execute($query_params);
-    }
-    catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
-    $row = $stmt->fetch();
-    if($row){ die("This housename is already in use"); }
+            $query_params = array(':name' => $_POST['name']);
+            try {
+                $stmt = $db->prepare($query);
+                $result = $stmt->execute($query_params);
+            } catch (PDOException $ex) {
+                die("Failed to run query: " . $ex->getMessage());
+            }
+            $row = $stmt->fetch();
+            if ($row) {
+                die("This housename is already in use");
+            }
 
 
-    // Add row to database
-    // to do add imageName to both
-    $query = "
+            // Add row to database
+            // to do add imageName to both
+            $query = "
             INSERT INTO houses (
                   name,
                   state,
@@ -94,6 +105,7 @@ if(!empty($_POST))
                   stars,
                   longitude,
                   latitude,
+                  imageName,
                   users_id
 
                   ) VALUES (
@@ -110,66 +122,46 @@ if(!empty($_POST))
                     :stars,
                     :longitude,
                     :latitude,
+                    :imageName,
                     :username
                      )
         ";
 
-    $query_params =  array (
-        ':name' => $_POST['name'],
-        ':state' => $_POST['state'],
-        ':address' => $_POST['address'],
-        ':meter' => $_POST['meter'],
-        ':price' => $_POST['price'],
-        ':telephone' => $_POST['telephone'],
-        ':wifi' => $wifi,
-        ':pool' => $pool,
-        ':maid' => $maid,
-        ':description' => $_POST['description'],
-        ':stars' => $_POST['stars'],
-        ':longitude' => $_POST['longitude'],
-        ':latitude' => $_POST['latitude'],
-        ':username' => $userid
-    );
+            $query_params = array(
+                ':name' => $_POST['name'],
+                ':state' => $_POST['state'],
+                ':address' => $_POST['address'],
+                ':meter' => $_POST['meter'],
+                ':price' => $_POST['price'],
+                ':telephone' => $_POST['telephone'],
+                ':wifi' => $wifi,
+                ':pool' => $pool,
+                ':maid' => $maid,
+                ':description' => $_POST['description'],
+                ':stars' => $_POST['stars'],
+                ':longitude' => $_POST['longitude'],
+                ':latitude' => $_POST['latitude'],
+                ':imageName' => $_FILES['image'],
+                ':username' => $userid
+            );
 
-    try {
-        $stmt = $db->prepare($query);
-        $result = $stmt->execute($query_params);
+            try {
+                $stmt = $db->prepare($query);
+                $result = $stmt->execute($query_params);
 
+            } catch (PDOException $ex) {
+                die("Failed to run query: " . $ex->getMessage());
+            }
+
+
+            header("Location: index.php?msg=Data Entry Success");
+            die("Redirecting to index.php");
+
+        } else {
+            header('Location: uploadHouse.php?msg=wrong data');
+            exit();
+
+        }
     }
-    catch(PDOException $ex) {
-        die("Failed to run query: " . $ex->getMessage());
-    }
-
-
-
-    header("Location: index.php?msg=Data Entry Success");
-    die("Redirecting to index.php");
-
-
-
-
-
-
-    //To do check image upload
-    /*if (isset($_FILES['mainphoto'])) {
-        $filename = $_FILES['mainphoto']['name'];
-        $ext = strtolower(substr($filename, -3));
-        $new_filename = uniqid("villasprifileimage-", true) . '.' . $ext;
-        $copied = copy($_FILES['mainphoto']['tmp_name'], 'villasprofileimages/' . $new_filename);
-    }*/
-
-    if ($query_params) {
-        header('Location: secret.php?msg=success');
-        exit();
-    } else {
-        header('Location: secret.php?msg=problem');
-        exit();
-    }
-} else {
-    header('Location: secret.php?msg=wrong data');
-    exit();
-
 }
 ?>
-
-

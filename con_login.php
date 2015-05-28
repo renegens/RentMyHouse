@@ -42,8 +42,8 @@
             $_SESSION['user'] = $row;
             $_SESSION['username'] = $row['username'];
             $_SESSION["loggedIn"] = true;
-            header("Location: secret.php");
-            die("Redirecting to: secret.php");
+            header("Location: uploadHouse.php");
+            die("Redirecting to: uploadHouse.php");
 
         }
         else{
