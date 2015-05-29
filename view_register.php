@@ -1,6 +1,6 @@
 <?php
-include ("head.php");
-include ("navbar.php");
+include("view_head.php");
+include("view_navbar.php");
 
 ?>
 
@@ -48,4 +48,4 @@ include ("navbar.php");
 
 
 
-<?php include "footer.php"; ?>
+<?php include "view_footer.php"; ?>

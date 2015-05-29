@@ -3,7 +3,7 @@ require("config.php");
 
 //check captcha - send to error.php if failed to match
     if ( $_SESSION['security_code'] !== $_POST['captcha'] ) { unset($_SESSION['security_code']);
-    header("Location: register.php?msg=Captcha do not match! Please retry.");
+    header("Location: view_register.php?msg=Captcha do not match! Please retry.");
         exit();}
 
 if(!empty($_POST))

@@ -6,8 +6,8 @@
         header("Location: index.php");
         die("Redirecting to index.php");
     }
-require "head.php";
-require "navbar.php";
+require "view_head.php";
+require "view_navbar.php";
 ?>
 
     <div class="col-lg-4 col-lg-offset-4">
@@ -186,5 +186,5 @@ require "navbar.php";
 
 
 <?php
-include "footer.php";
+include "view_footer.php";
 ?>

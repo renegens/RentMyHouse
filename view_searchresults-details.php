@@ -1,7 +1,7 @@
 <?php
 require("config.php");
-require("head.php");
-require("navbar.php");
+require("view_head.php");
+require("view_navbar.php");
 
 $query = ("SELECT * FROM houses WHERE name=:name");
 try {
@@ -78,5 +78,5 @@ try {
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
-<?php require ("footer.php"); ?>
+<?php require("view_footer.php"); ?>
 

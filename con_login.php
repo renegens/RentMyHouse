@@ -42,8 +42,8 @@
             $_SESSION['user'] = $row;
             $_SESSION['username'] = $row['username'];
             $_SESSION["loggedIn"] = true;
-            header("Location: uploadHouse.php");
-            die("Redirecting to: uploadHouse.php");
+            header("Location: view_uploadHouse.php");
+            die("Redirecting to: view_uploadHouse.php");
 
         }
         else{

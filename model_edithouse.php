@@ -6,8 +6,8 @@ if(empty($_SESSION['username']))
     header("Location: index.php");
     die("Redirecting to index.php");
 }
-require "head.php";
-require "navbar.php";
+require "view_head.php";
+require "view_navbar.php";
 
 $userid=-1;
 // Check if the house is already taken
@@ -230,4 +230,4 @@ try {
 
 </div>
 
-<?php require("footer.php")?>
+<?php require("view_footer.php") ?>

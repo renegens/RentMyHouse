@@ -158,7 +158,7 @@ if(!empty($_POST))
             die("Redirecting to index.php");
 
         } else {
-            header('Location: uploadHouse.php?msg=wrong data');
+            header('Location: view_uploadHouse.php?msg=wrong data');
             exit();
 
         }

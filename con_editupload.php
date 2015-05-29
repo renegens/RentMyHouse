@@ -150,14 +150,14 @@ if(!empty($_POST))
     }*/
 
     if ($query_params) {
-        header('Location: uploadHouse.php?msg=success');
+        header('Location: view_uploadHouse.php?msg=success');
         exit();
     } else {
-        header('Location: uploadHouse.php?msg=problem');
+        header('Location: view_uploadHouse.php?msg=problem');
         exit();
     }
 } else {
-    header('Location: uploadHouse.php?msg=wrong data');
+    header('Location: view_uploadHouse.php?msg=wrong data');
     exit();
 
 }

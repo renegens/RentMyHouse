@@ -3,9 +3,9 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello, <?php echo $_SESSION['username']?> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="uploadHouse.php">Upload House</a></li>
-                    <li><a href="edithouse.php">Edit House</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="view_uploadHouse.php">Upload House</a></li>
+                    <li><a href="model_edithouse.php">Edit House</a></li>
+                    <li><a href="con_logout.php">Logout</a></li>
 
                     <li class="divider"></li>
                     <li><a href="#">Separated link</a></li>

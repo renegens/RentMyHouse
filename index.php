@@ -5,8 +5,8 @@ $title = "Home Page";
 
 
 require ("con_login.php");
-require("head.php");
-require("navbar.php");
+require("view_head.php");
+require("view_navbar.php");
 
 ?>
 
@@ -119,7 +119,7 @@ require("navbar.php");
 
 
 
-<?php include("footer.php");
+<?php include("view_footer.php");
 
 ?>
 

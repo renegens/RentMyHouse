@@ -32,7 +32,7 @@
             </ul>
 
 
-            <form class="navbar-form navbar-left" method="get" action="searchresults.php" role="search">
+            <form class="navbar-form navbar-left" method="get" action="view_searchresults-details.php" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" name="simpleSearch" id="keyword" placeholder="Search" list="results" autocomplete="off">
                     <datalist id="results"> </datalist>
@@ -51,9 +51,9 @@
 
             <!--Logic to display different nav bar to user when logged in -->
             <?php if (isset($_SESSION['username'])) {
-                include "navbar_logged_in.php";
+                include "view_navbar-logged-in.php";
             }else{
-                include ("navbar_login.php");
+                include("view_navbar-login.php");
             }?>
 
         </div>

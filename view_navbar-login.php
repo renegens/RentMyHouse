@@ -1,6 +1,6 @@
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="register.php">Register</a></li>
+                <li><a href="view_register.php">Register</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
                     <div class="dropdown-menu login-menu">
