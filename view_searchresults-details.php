@@ -1,52 +1,65 @@
 <?php
+$title = "Search Results";
 require("config.php");
+
+
+if (isset($_GET['simpleSearch'])){
+    $query = ("SELECT * FROM houses WHERE name=:name");
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute(array(':name'=> $_GET['simpleSearch']));
+        if ($statement->rowCount() > 0){
+        while ($row = $statement->fetch()) {
+            $name = $row['name'];
+            $state = $row['state'];
+            $address = $row['address'];
+            $price = $row['price'];
+            $meter = $row['meter'];
+            $telephone = $row['telephone'];
+            $wifi = $row['wifi'];
+            $pool = $row['pool'];
+            $maid = $row['maid'];
+            $description = $row['description'];
+            $stars = $row['stars'];
+            $imageLink = $row['imageName'];
+            $longitude  = $row['longitude'];
+            $latitude = $row['latitude'];
+
+            }
+        }else header('Location: view_advanced-search.php');
+    } catch (PDOException $ex) {
+        header('Location: index.php?msg=no-connection-to-server');
+        exit();
+    }
+
+
+}else header('Location: view_advanced-search.php');
+
 require("view_head.php");
 require("view_navbar.php");
-
-$query = ("SELECT * FROM houses WHERE name=:name");
-try {
-    $statement = $db->prepare($query);
-    $statement->execute(array(':name'=> $_GET['simpleSearch']));
-    echo "Search Results";
-    while ($row = $statement->fetch()) {
-        $name = $row['name'];
-        $state = $row['state'];
-        $address = $row['address'];
-        $price = $row['price'];
-        $meter = $row['meter'];
-        $telephone = $row['telephone'];
-        $wifi = $row['wifi'];
-        $pool = $row['pool'];
-        $maid = $row['maid'];
-        $description = $row['description'];
-        $stars = $row['stars'];
-        $longitude  = $row['longitude'];
-        $latitude = $row['latitude'];
-
-    }
-} catch (PDOException $ex) {
-   // header('Location: index.php?msg=no-connection-to-server');
-    exit();
-}
 
 ?>
 
     <div class="container">
-    <ul class="list-group">
-        <li class="list-group-item">Name: <?php echo $name ?></li>
-        <li class="list-group-item">State: <?php echo $state ?></li>
-        <li class="list-group-item">Address: <?php echo $address ?></li>
-        <li class="list-group-item">Price: <?php echo $price ?></li>
-        <li class="list-group-item">Meter: <?php echo $meter ?></li>
-        <li class="list-group-item">Telephone: <?php echo $name ?></li>
-        <li class="list-group-item">Wifi: <?php echo $wifi ?></li>
-        <li class="list-group-item">Pool: <?php echo $pool ?></li>
-        <li class="list-group-item">Maid: <?php echo $maid ?></li>
-        <li class="list-group-item">Description: <?php echo $description ?></li>
-        <li class="list-group-item">Stars: <?php echo $stars ?></li>
-        <li class="list-group-item">Longitude: <?php echo $longitude ?></li>
-        <li class="list-group-item">Latitude: <?php echo $latitude ?></li>
-    </ul>
+        <div class="row">
+                <ul class="list-group pull-left">
+                    <li class="list-group-item">Name: <?php echo $name ?></li>
+                    <li class="list-group-item">State: <?php echo $state ?></li>
+                    <li class="list-group-item">Address: <?php echo $address ?></li>
+                    <li class="list-group-item">Price: <?php echo $price.'&#8364' ?></li>
+                    <li class="list-group-item">Meter: <?php echo $meter.'&#13217' ?></li>
+                    <li class="list-group-item">Telephone: <?php echo $name ?></li>
+                    <li class="list-group-item">Wifi: <?php if ($wifi==1){echo "Yes";} else {echo "No";} ?></li>
+                    <li class="list-group-item">Pool: <?php if ($pool==1){echo "Yes";} else {echo "No";} ?></li>
+                    <li class="list-group-item">Maid: <?php if ($maid==1){echo "Yes";} else {echo "No";} ?></li>
+                    <li class="list-group-item">Description: <?php echo $description ?></li>
+                    <li class="list-group-item">Stars: <?php echo $stars ?></li>
+                    <li class="list-group-item">Longitude: <?php echo $longitude ?></li>
+                    <li class="list-group-item">Latitude: <?php echo $latitude ?></li>
+                </ul>
+            <img class="img-responsive pull-right" src="<?php echo $imageLink; ?>">
+            </div>
+
     </div>
 
     <div class="container">

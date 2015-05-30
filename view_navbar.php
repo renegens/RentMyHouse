@@ -34,7 +34,7 @@
 
             <form class="navbar-form navbar-left" method="get" action="view_searchresults-details.php" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="simpleSearch" id="keyword" placeholder="Search" list="results" autocomplete="off">
+                    <input type="text" class="form-control" name="simpleSearch" id="keyword" placeholder="Search House Name" list="results" autocomplete="off">
                     <datalist id="results"> </datalist>
 
                 </div>

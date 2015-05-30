@@ -1,5 +1,5 @@
 <?php
-
+    $title = "Upload House";
     require("config.php");
     if(empty($_SESSION['user']))
     {
@@ -12,7 +12,7 @@ require "view_navbar.php";
 
     <div class="col-lg-4 col-lg-offset-4">
         <h2 class="text-center">Admin Panel</h2>
-        <form class="form-horizontal" method="post" action="con_uploadhouse.php">
+        <form class="form-horizontal" method="post" action="con_uploadhouse.php" enctype="multipart/form-data">
             <fieldset>
 
                 <!-- Form Name -->
@@ -145,7 +145,7 @@ require "view_navbar.php";
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="image">Upload Image</label>
                     <div class="col-md-4">
-                        <input id="image" name="image" class="input-file" type="file">
+                        <input id="image" name="fileToUpload" class="input-file" type="file">
                     </div>
                 </div>
 

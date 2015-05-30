@@ -1,4 +1,5 @@
 <?php
+$title = "Advanced Search";
 //the view to make an advanced search with forms
 
 include ("view_head.php");
