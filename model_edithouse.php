@@ -46,7 +46,14 @@ try {
         $maid = $row['maid'];
         $description = $row['description'];
         $stars = $row['stars'];
-        $imageLink = $row['imageName'];
+        $imageLink  = $row['imageName'];
+        $imageDescr = $row['imageDescr'];
+        $imageLink2 = $row['imageName2'];
+        $imageDescr = $row['imageDescr2'];
+        $imageLink3 = $row['imageName3'];
+        $imageDescr = $row['imageDescr3'];
+        $imageLink4 = $row['imageName4'];
+        $imageDescr = $row['imageDescr4'];
         $longitude  = $row['longitude'];
         $latitude = $row['latitude'];
 
@@ -58,25 +65,7 @@ try {
     header('Location: index.php?msg=no-connection-to-server');
     exit();
 }
-//For image table
 
-$query = "SELECT * FROM images WHERE houses_houseID= ".$houseid;
-
-try {
-    $statement = $db->prepare($query);
-    $statement->execute( array(':houses_houseID'=>$houseid ) );
-
-    while ($row = $statement->fetch()) {
-        $imageID = $row['imageID'];
-        $imageName = $row['imageName'];
-        $imageDescr  = $row['imageDescr'];
-        $houses_houseID = $row['houses_houseID'];
-
-    }
-} catch (PDOException $ex) {
-    header('Location: index.php?msg=no-connection-to-server');
-    exit();
-}
 require "view_head.php";
 require "view_navbar.php";
 ?>
@@ -222,24 +211,32 @@ require "view_navbar.php";
                 <div class="row">
                     <div class="col-xs-3">
                         <a href="#" class="thumbnail">
-                            <img src="<?php echo $imageLink ?>" alt="125x125">
+                            <img src="<?php echo $imageLink ?>" alt="<?php echo $imageDescr ?>">
                         </a>
                     </div>
                     <div class="col-xs-3">
                         <a href="#" class="thumbnail">
-                            <img src="<?php echo $imageName ?>" alt="125x125">
+                            <img src="<?php echo $imagelink2 ?>" alt="<?php echo $imageDescr2 ?>">
                         </a>
                     </div>
                     <div class="col-xs-3">
                         <a href="#" class="thumbnail">
-                            <img src="<?php echo $imageLink ?>" alt="125x125">
+                            <img src="<?php echo $imageLink3 ?>" alt="<?php echo $imageDescr3 ?>">
                         </a>
                     </div>
                     <div class="col-xs-3">
                         <a href="#" class="thumbnail">
-                            <img src="<?php echo $imageName ?>" alt="125x125">
+                            <img src="<?php echo $imageName4 ?>" alt="<?php echo $imageDescr4 ?>">
                         </a>
                     </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="latitude">Latitude</label>
+                <div class="col-md-5">
+                    <input id="latitude" name="latitude" type="text" value="<?php echo $latitude ?>" placeholder="40.53646546" class="form-control input-md" required="">
                 </div>
             </div>
 
@@ -252,14 +249,7 @@ require "view_navbar.php";
                 </div>
             </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="latitude">Latitude</label>
-                <div class="col-md-5">
-                    <input id="latitude" name="latitude" type="text" value="<?php echo $latitude ?>" placeholder="40.53646546" class="form-control input-md" required="">
 
-                </div>
-            </div>
 
             <!-- Button (Double) -->
             <div class="form-group">
