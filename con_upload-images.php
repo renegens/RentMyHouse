@@ -1,18 +1,291 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: renegens
- * Date: 5/30/15
- * Time: 20:22
- */
-/*
-                ':imageDescr' => $_POST['imageDescr'],
-                ':imageName2' => $target2_file,
-                ':imageDescr2' => $_POST['imageDescr2'],
-                ':imageName3' => $target3_file,
-                ':imageDescr3' => $_POST['imageDescr3'],
-                ':imageName4' => $target4_file,
-                ':imageDescr4' => $_POST['imageDescr4'],*/
+        //Check if decrptions exists and then upload files.
+        if(empty($_POST['imageDescr1']))
+        { die("Please Enter an image description."); }
+        if(empty($_POST['imageDescr2']))
+        { die("Please Enter an image description.");}
+         if(empty($_POST['imageDescr3']))
+        { die("Please Enter an image description.");}
 
-//revert previous logic and implement the more icons into a different database for better managment iwth a differetnt form.
-// copy the form and extra to use it for it. 
+        //1 File check make a function of this if time
+        if (isset($_FILES['fileToUpload1'])) {
+            $target_dir = "upload/";
+            $target_file = $target_dir . basename($_FILES["fileToUpload1"]["name"]);
+            $uploadOk = 1;
+            $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+        }
+
+        // Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload1"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["fileToUpload1"]["size"] > 500000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif"
+        ) {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload1"]["tmp_name"], $target_file)) {
+                echo "The file " . basename($_FILES["fileToUpload1"]["name"]) . " has been uploaded.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+
+        //2 File check make a function of this if time
+        if (isset($_FILES['fileToUpload2'])) {
+            $target_dir = "upload/";
+            $target_file2 = $target_dir . basename($_FILES["fileToUpload2"]["name"]);
+            $uploadOk = 1;
+            $imageFileType = pathinfo($target_file2, PATHINFO_EXTENSION);
+        }
+
+        // Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload2"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+        // Check if file already exists
+        if (file_exists($target_file2)) {
+            echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["fileToUpload2"]["size"] > 500000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif"
+        ) {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload2"]["tmp_name"], $target_file)) {
+                echo "The file " . basename($_FILES["fileToUpload2"]["name"]) . " has been uploaded.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+
+
+        //3 File check make a function of this if time
+        if (isset($_FILES['fileToUpload3'])) {
+            $target_dir = "upload/";
+            $target_file3 = $target_dir . basename($_FILES["fileToUpload3"]["name"]);
+            $uploadOk = 1;
+            $imageFileType = pathinfo($target_file3, PATHINFO_EXTENSION);
+        }
+
+        // Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload3"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+        // Check if file already exists
+        if (file_exists($target_file3)) {
+            echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["fileToUpload3"]["size"] > 500000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif"
+        ) {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload3"]["tmp_name"], $target_file)) {
+                echo "The file " . basename($_FILES["fileToUpload3"]["name"]) . " has been uploaded.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+
+
+
+        //Get house ID info
+
+        //if(empty($_SESSION['username'])) exit();
+        require "config.php";
+        $houseid=-1;
+        $query = "
+                    SELECT
+                        houseID
+                    FROM houses
+                    WHERE
+                        users_id = :houseid
+                ";
+        $query_params = array( ':houseID' => $houseid );
+        try {
+            $stmt = $db->prepare($query);
+            $result = $stmt->execute($query_params);
+        }
+        catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+        $row = $stmt->fetch();
+        if($row){ $houseid=$row['houseID']; }
+
+      /*  //First me must find the row
+        $query = "SELECT houseID FROM houses
+                      WHERE
+                      houseID= ".$houseid;
+        $query_params = ( array( ":houseID" => $houseid ) );
+        try {
+            $stmt = $db->prepare($query);
+            $result = $stmt->execute($query_params);
+        }
+        catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }*/
+
+        //Insert the data into the image table
+
+
+        $query = "
+                    INSERT INTO images (
+                          imageName,
+                          imageDescr,
+                          houses_houseID
+
+
+                          ) VALUES (
+                            :imageName,
+                            :imageDescr,
+                            :houses_houseID
+                          )
+                ";
+
+        $query_params =  array (
+            'imageName' => $target_file,
+            'imageDescr' => $_POST['imageDescr'],
+            ':houses_houseID' => $houseid
+
+        );
+
+        try {
+            $stmt = $db->prepare($query);
+            $result = $stmt->execute($query_params);
+
+        }
+        catch(PDOException $ex) {
+            die("Failed to run query: " . $ex->getMessage());
+        }
+
+        $query = "
+                    INSERT INTO images (
+                          imageName,
+                          imageDescr,
+                          houses_houseID
+
+
+                          ) VALUES (
+                            :imageName,
+                            :imageDescr,
+                            :houses_houseID
+                          )
+                ";
+
+        $query_params =  array (
+            'imageName' => $target_file2,
+            'imageDescr' => $_POST['imageDescr2'],
+            ':houses_houseID' => $houseid
+
+        );
+
+        try {
+            $stmt = $db->prepare($query);
+            $result = $stmt->execute($query_params);
+
+        }
+        catch(PDOException $ex) {
+            die("Failed to run query: " . $ex->getMessage());
+        }
+
+
+
+        $query = "
+                    INSERT INTO images (
+                          imageName,
+                          imageDescr,
+                          houses_houseID
+
+
+                          ) VALUES (
+                            :imageName,
+                            :imageDescr,
+                            :houses_houseID
+                          )
+                ";
+
+        $query_params =  array (
+            'imageName' => $target_file3,
+            'imageDescr' => $_POST['imageDescr3'],
+            ':houses_houseID' => $houseid
+
+        );
+
+        try {
+            $stmt = $db->prepare($query);
+            $result = $stmt->execute($query_params);
+
+        }
+        catch(PDOException $ex) {
+            die("Failed to run query: " . $ex->getMessage());
+        }
+
+    header("Location: index.php?msg=Data Entry Success");
+    die("Redirecting to index.php");
+
+
+
+
+?>
+

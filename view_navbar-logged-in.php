@@ -5,10 +5,11 @@
                 <ul class="dropdown-menu">
                     <li><a href="view_uploadHouse.php">Upload House</a></li>
                     <li><a href="model_edithouse.php">Edit House</a></li>
-                    <li><a href="con_logout.php">Logout</a></li>
+                    <li><a href="view_imageUpload.php">Upload Images</a></li>
 
                     <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                    <li><a href="con_logout.php">Logout</a></li>
+
                     <li class="divider"></li>
                     <li><a href="#">One more separated link</a></li>
                 </ul>

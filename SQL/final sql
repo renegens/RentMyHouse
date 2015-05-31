@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2015 at 12:25 AM
+-- Generation Time: May 31, 2015 at 02:42 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -43,15 +43,14 @@ CREATE TABLE IF NOT EXISTS `houses` (
   `latitude` double NOT NULL,
   `imageName` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `users_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `houses`
 --
 
 INSERT INTO `houses` (`houseID`, `name`, `state`, `address`, `price`, `meter`, `telephone`, `wifi`, `pool`, `maid`, `description`, `stars`, `longitude`, `latitude`, `imageName`, `users_id`) VALUES
-(1, 'sdfsdf', 'Thessalia', 'dfsdfdsf', 324, 342, 32432432, 0, 0, 0, 'A beautiful house by the sea..', 1, 234, 234324, NULL, 3),
-(2, 'myhouse12', 'Thessalia', 'dfsdfdsf', 324, 342, 32432432, 0, 0, 0, 'A beautiful house by the sea..', 1, 234, 234324, NULL, 3);
+(6, 'home', 'Thessalia', 'Ipokratous', 100, 20, 2147483647, 0, 1, 0, 'A beautiful house by the sea..', 1, 22.5355949, 39.621161, '', 3);
 
 -- --------------------------------------------------------
 
@@ -119,7 +118,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `houses`
 --
 ALTER TABLE `houses`
-  MODIFY `houseID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `houseID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `images`
 --

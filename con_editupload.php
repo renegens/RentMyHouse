@@ -55,7 +55,7 @@ if(!empty($_POST))
     $row = $stmt->fetch();
     if($row){ $userid=$row['id']; }
 
-    //Fist me must delete the row
+    //First me must delete the row
     $query = "DELETE FROM houses
               WHERE
               users_id= ".$userid; //"SELECT * FROM houses WHERE users_id= ".$userid;

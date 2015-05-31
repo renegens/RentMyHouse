@@ -137,7 +137,7 @@ require "view_navbar.php";
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="description">Notes</label>
                     <div class="col-md-4">
-                        <textarea class="form-control" id="description" name="description">A beautiful house by the sea..</textarea>
+                        <textarea class="form-control" id="description" name="description" placeholder="A beautiful house by the sea.."></textarea>
                     </div>
                 </div>
 
@@ -146,51 +146,6 @@ require "view_navbar.php";
                     <label class="col-md-4 control-label" for="image">Upload Image</label>
                     <div class="col-md-4">
                         <input id="image" name="fileToUpload" class="input-file" type="file">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="description">Image Description</label>
-                    <div class="col-md-4">
-                        <textarea class="form-control" id="imageDescr" name="description">A beautiful house by the sea..</textarea>
-                    </div>
-                </div>
-                <!-- File Button 2-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="image">Upload Image</label>
-                    <div class="col-md-4">
-                        <input id="image" name="fileToUpload2" class="input-file" type="file">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="description">Image Description</label>
-                    <div class="col-md-4">
-                        <textarea class="form-control" id="imageDescr2" name="description">A beautiful house by the sea..</textarea>
-                    </div>
-                </div>
-                <!-- File Button 3-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="image">Upload Image</label>
-                    <div class="col-md-4">
-                        <input id="image" name="fileToUpload3" class="input-file" type="file">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="description">Image Description</label>
-                    <div class="col-md-4">
-                        <textarea class="form-control" id="imageDescr3" name="description">A beautiful house by the sea..</textarea>
-                    </div>
-                </div>
-                <!-- File Button 4-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="image">Upload Image</label>
-                    <div class="col-md-4">
-                        <input id="image" name="fileToUpload4" class="input-file" type="file">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="description">Image Description</label>
-                    <div class="col-md-4">
-                        <textarea class="form-control" id="imageDescr4" name="description">A beautiful house by the sea..</textarea>
                     </div>
                 </div>
 
