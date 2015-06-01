@@ -137,18 +137,6 @@ if(!empty($_POST))
     die("Redirecting to index.php");
 
 
-
-
-
-
-    //To do check image upload
-    /*if (isset($_FILES['mainphoto'])) {
-        $filename = $_FILES['mainphoto']['name'];
-        $ext = strtolower(substr($filename, -3));
-        $new_filename = uniqid("villasprifileimage-", true) . '.' . $ext;
-        $copied = copy($_FILES['mainphoto']['tmp_name'], 'villasprofileimages/' . $new_filename);
-    }*/
-
     if ($query_params) {
         header('Location: view_uploadHouse.php?msg=success');
         exit();

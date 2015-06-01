@@ -109,7 +109,7 @@ require "view_navbar.php";
                 <!-- Multiple Radios (inline) -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="stars">Stars</label>
-                    <div class="col-md-4">
+                    <div class="col-md-8">
                         <label class="radio-inline" for="stars-0">
                             <input type="radio" name="stars" id="stars-0" value="1" checked="checked">
                             1
@@ -136,7 +136,7 @@ require "view_navbar.php";
                 <!-- Textarea -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="description">Notes</label>
-                    <div class="col-md-4">
+                    <div class="col-md-8">
                         <textarea class="form-control" id="description" name="description" placeholder="A beautiful house by the sea.."></textarea>
                     </div>
                 </div>

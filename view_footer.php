@@ -26,10 +26,5 @@
 <script src="js/custom.js"></script>
 <script src="js/autocomplete.js"></script>
 
-
-
-
-
-
 </body>
 </html>

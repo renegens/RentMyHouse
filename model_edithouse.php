@@ -47,13 +47,6 @@ try {
         $description = $row['description'];
         $stars = $row['stars'];
         $imageLink  = $row['imageName'];
-        $imageDescr = $row['imageDescr'];
-        $imageLink2 = $row['imageName2'];
-        $imageDescr = $row['imageDescr2'];
-        $imageLink3 = $row['imageName3'];
-        $imageDescr = $row['imageDescr3'];
-        $imageLink4 = $row['imageName4'];
-        $imageDescr = $row['imageDescr4'];
         $longitude  = $row['longitude'];
         $latitude = $row['latitude'];
 
@@ -199,36 +192,6 @@ require "view_navbar.php";
                 <label class="col-md-4 control-label" for="description">Notes</label>
                 <div class="col-md-4">
                     <textarea class="form-control" id="description" value="<?php echo $description ?>" name="description">A beautiful house by the sea..</textarea>
-                </div>
-            </div>
-
-            <!-- File Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="image">Upload Image</label>
-                <div class="col-md-4">
-                    <input id="image" name="fileToUpload" class="input-file" type="file">
-                </div>
-                <div class="row">
-                    <div class="col-xs-3">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo $imageLink ?>" alt="<?php echo $imageDescr ?>">
-                        </a>
-                    </div>
-                    <div class="col-xs-3">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo $imagelink2 ?>" alt="<?php echo $imageDescr2 ?>">
-                        </a>
-                    </div>
-                    <div class="col-xs-3">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo $imageLink3 ?>" alt="<?php echo $imageDescr3 ?>">
-                        </a>
-                    </div>
-                    <div class="col-xs-3">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo $imageName4 ?>" alt="<?php echo $imageDescr4 ?>">
-                        </a>
-                    </div>
                 </div>
             </div>
 

@@ -78,30 +78,25 @@ if(!empty($_POST))
             echo "Sorry, there was an error uploading your file.";
         }
     }
-            //Check for username to be same with session
-            //get session username
+        //get session username from db
 
-            if (empty($_SESSION['username'])) exit();
-            $userid = -1;
-            // Check if the house is already taken
-            $query = "
-            SELECT
-                id
-            FROM users
-            WHERE
-                username = :user
-        ";
-            $query_params = array(':user' => $_SESSION['username']);
-            try {
-                $stmt = $db->prepare($query);
-                $result = $stmt->execute($query_params);
-            } catch (PDOException $ex) {
-                die("Failed to run query: " . $ex->getMessage());
-            }
-            $row = $stmt->fetch();
-            if ($row) {
-                $userid = $row['id'];
-            }
+        if(empty($_SESSION['username'])) exit();
+        $userid=-1;
+        $query = "
+                SELECT
+                    id
+                FROM users
+                WHERE
+                    username = :user
+            ";
+        $query_params = array( ':user' => $_SESSION['username'] );
+        try {
+            $stmt = $db->prepare($query);
+            $result = $stmt->execute($query_params);
+        }
+        catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+        $row = $stmt->fetch();
+        if($row){ $userid=$row['id']; }
 
 
             // Check if the house is already taken

@@ -1,4 +1,5 @@
 <?php
+require "config.php";
         //Check if decrptions exists and then upload files.
         if(empty($_POST['imageDescr1']))
         { die("Please Enter an image description."); }
@@ -6,6 +7,44 @@
         { die("Please Enter an image description.");}
          if(empty($_POST['imageDescr3']))
         { die("Please Enter an image description.");}
+
+if(empty($_SESSION['username'])) exit();
+$userid=-1;
+$query = "
+                        SELECT
+                            id
+                        FROM users
+                        WHERE
+                            username = :user
+                    ";
+$query_params = array( ':user' => $_SESSION['username'] );
+try {
+    $stmt = $db->prepare($query);
+    $result = $stmt->execute($query_params);
+}
+catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+$row = $stmt->fetch();
+if($row){ $userid=$row['id']; }
+
+
+//get house id for this user
+
+$query = "
+                        SELECT
+                            houseID
+                        FROM houses
+                        WHERE
+                            users_id = :user_id
+                    ";
+$query_params = array( ':user_id' => $userid );
+try {
+    $stmt = $db->prepare($query);
+    $result = $stmt->execute($query_params);
+}
+catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
+$row = $stmt->fetch();
+if($row){ $houseID=$row['houseID']; }
+
 
         //1 File check make a function of this if time
         if (isset($_FILES['fileToUpload1'])) {
@@ -96,7 +135,7 @@
             echo "Sorry, your file was not uploaded.";
             // if everything is ok, try to upload file
         } else {
-            if (move_uploaded_file($_FILES["fileToUpload2"]["tmp_name"], $target_file)) {
+            if (move_uploaded_file($_FILES["fileToUpload2"]["tmp_name"], $target_file2)) {
                 echo "The file " . basename($_FILES["fileToUpload2"]["name"]) . " has been uploaded.";
             } else {
                 echo "Sorry, there was an error uploading your file.";
@@ -145,7 +184,7 @@
             echo "Sorry, your file was not uploaded.";
             // if everything is ok, try to upload file
         } else {
-            if (move_uploaded_file($_FILES["fileToUpload3"]["tmp_name"], $target_file)) {
+            if (move_uploaded_file($_FILES["fileToUpload3"]["tmp_name"], $target_file3)) {
                 echo "The file " . basename($_FILES["fileToUpload3"]["name"]) . " has been uploaded.";
             } else {
                 echo "Sorry, there was an error uploading your file.";
@@ -153,40 +192,6 @@
         }
 
 
-
-        //Get house ID info
-
-        //if(empty($_SESSION['username'])) exit();
-        require "config.php";
-        $houseid=-1;
-        $query = "
-                    SELECT
-                        houseID
-                    FROM houses
-                    WHERE
-                        users_id = :houseid
-                ";
-        $query_params = array( ':houseID' => $houseid );
-        try {
-            $stmt = $db->prepare($query);
-            $result = $stmt->execute($query_params);
-        }
-        catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
-        $row = $stmt->fetch();
-        if($row){ $houseid=$row['houseID']; }
-
-      /*  //First me must find the row
-        $query = "SELECT houseID FROM houses
-                      WHERE
-                      houseID= ".$houseid;
-        $query_params = ( array( ":houseID" => $houseid ) );
-        try {
-            $stmt = $db->prepare($query);
-            $result = $stmt->execute($query_params);
-        }
-        catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }*/
-
-        //Insert the data into the image table
 
 
         $query = "
@@ -205,8 +210,8 @@
 
         $query_params =  array (
             'imageName' => $target_file,
-            'imageDescr' => $_POST['imageDescr'],
-            ':houses_houseID' => $houseid
+            'imageDescr' => $_POST['imageDescr1'],
+            ':houses_houseID' => $houseID
 
         );
 
@@ -236,7 +241,7 @@
         $query_params =  array (
             'imageName' => $target_file2,
             'imageDescr' => $_POST['imageDescr2'],
-            ':houses_houseID' => $houseid
+            ':houses_houseID' => $houseID
 
         );
 
@@ -268,7 +273,7 @@
         $query_params =  array (
             'imageName' => $target_file3,
             'imageDescr' => $_POST['imageDescr3'],
-            ':houses_houseID' => $houseid
+            ':houses_houseID' => $houseID
 
         );
 
