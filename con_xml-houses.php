@@ -16,28 +16,48 @@ $query = 'SELECT * FROM houses';
 $statement = $db->prepare($query);
 $statement->execute();
 
-header("Content-type: text/xml");
-echo '<'.'?xml version="1.0" encoding="utf-8"?'.'>';
+header("Content-Type: text/xml; charset=UTF-8");
+
+
+echo '<?xml version="1.0" encoding="UTF-8"?' . '>' . "\r\n";
 
 // Start XML file, echo parent node
+echo '<!DOCTYPE houses [';
+echo '        <!ELEMENT houses (house)*>';
+echo '        <!ELEMENT house (#PCDATA)>';
+echo '        <!ATTLIST house';
+echo '                address CDATA #REQUIRED';
+echo '                description CDATA #REQUIRED';
+echo '                houseID CDATA #REQUIRED';
+echo '                lat CDATA #REQUIRED';
+echo '                lng CDATA #REQUIRED';
+echo '                maid CDATA #REQUIRED';
+echo '                meter CDATA #REQUIRED';
+echo '                pool CDATA #REQUIRED';
+echo '                price CDATA #REQUIRED';
+echo '                stars CDATA #REQUIRED';
+echo '                state CDATA #REQUIRED';
+echo '                telephone CDATA #REQUIRED';
+echo '                wifi CDATA #REQUIRED>';
+echo '        ]>';
 echo '<houses>';
 
 // Iterate through the rows, printing XML nodes for each
 foreach ($statement as $row) {
     echo '<house ';
-    echo 'houseID="' . $row['houseID'] . '" ';
-    echo 'state="' . parseToXML($row['state']) . '" ';
-    echo 'address="' . parseToXML($row['address']) . '" ';
-    echo 'price="' . $row['price'] . '" ';
-    echo 'meter="' . $row['meter'] . '" ';
-    echo 'telephone="' . $row['telephone'] . '" ';
-    echo 'wifi="' . $row['wifi'] . '" ';
-    echo 'pool="' . $row['pool'] . '" ';
-    echo 'maid="' . $row['maid'] . '" ';
-    echo 'description="' . parseToXML($row['description']) . '" ';
-    echo 'stars="' . $row['stars'] . '" ';
-    echo 'lat="' . $row['latitude'] . '" ';
-    echo 'lng="' . $row['longitude'] . '" ';
+    echo "\r\n".'houseID="' . $row['houseID'] . '" ';
+    echo "\r\n".'state="' . parseToXML($row['state']) . '" ';
+    echo "\r\n".'address="' . parseToXML($row['address']) . '" ';
+    echo "\r\n".'price="' . $row['price'] . '" ';
+    echo "\r\n".'meter="' . $row['meter'] . '" ';
+    echo "\r\n".'telephone="' . $row['telephone'] . '" ';
+    echo "\r\n".'wifi="' . $row['wifi'] . '" ';
+    echo "\r\n".'pool="' . $row['pool'] . '" ';
+    echo "\r\n".'maid="' . $row['maid'] . '" ';
+    echo "\r\n".'description="' . parseToXML($row['description']) . '" ';
+    echo "\r\n".'stars="' . $row['stars'] . '" ';
+    echo "\r\n".'lat="' . $row['latitude'] . '" ';
+    echo "\r\n".'lng="' . $row['longitude'] . '" ';
     echo '/>';
 
 }

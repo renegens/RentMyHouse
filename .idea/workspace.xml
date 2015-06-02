@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5504746d-8a34-4775-b045-e8d831cc8f31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/con_xml-houses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_navbar.php" afterPath="$PROJECT_DIR$/view_navbar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/con_advanced-search.php" afterPath="$PROJECT_DIR$/con_advanced-search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/con_xml-houses.php" afterPath="$PROJECT_DIR$/con_xml-houses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL/final sql" afterPath="$PROJECT_DIR$/SQL/final sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -51,16 +52,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="con_styles.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/con_styles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="858">
-              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,8 +72,8 @@
       <file leaf-file-name="con_xml-markers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/con_xml-markers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="902">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="2" />
+            <state vertical-scroll-proportion="-24.838709" vertical-offset="0" max-vertical-offset="902">
+              <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
               <folding>
                 <marker date="1433276720989" expanded="true" signature="346:383" placeholder="SELECT longi..houses..." />
               </folding>
@@ -90,33 +81,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="con_xml-houses.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/con_xml-houses.php">
+      <file leaf-file-name="final sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQL/final sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.4838705" vertical-offset="0" max-vertical-offset="1166">
-              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-              <folding>
-                <marker date="1433278386595" expanded="true" signature="346:366" placeholder="SELECT * FRO..houses..." />
-                <marker date="1433278386595" expanded="true" signature="565:695" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_searchresults-details.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view_searchresults-details.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1240" max-vertical-offset="2222">
-              <caret line="85" column="21" selection-start-line="83" selection-start-column="8" selection-end-line="87" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3388">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_navbar.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="con_xml-houses.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/con_xml-houses.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.451612" vertical-offset="462" max-vertical-offset="1606">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+              <folding>
+                <marker date="1433280843034" expanded="true" signature="346:366" placeholder="SELECT * FRO..houses..." />
+                <marker date="1433280843034" expanded="true" signature="1362:1497" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="con_advanced-search.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/con_advanced-search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.04616999" vertical-offset="0" max-vertical-offset="1298">
+              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+              <folding>
+                <marker date="1433281027560" expanded="true" signature="408:428" placeholder="select * fro..houses..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_navbar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view_navbar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23084995" vertical-offset="198" max-vertical-offset="1474">
+            <state vertical-scroll-proportion="-7.096774" vertical-offset="198" max-vertical-offset="1474">
               <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
               <folding />
             </state>
@@ -147,18 +150,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="con_login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/con_login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4193548" vertical-offset="0" max-vertical-offset="1320">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-              <folding>
-                <marker date="1433270717945" expanded="true" signature="124:324" placeholder="SELECT id, u..users..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -175,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/con_userlogin.php" />
         <option value="$PROJECT_DIR$/includes/createform.php" />
         <option value="$PROJECT_DIR$/controllers/signup_ac.php" />
         <option value="$PROJECT_DIR$/con_usercreate.php" />
@@ -205,13 +195,11 @@
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/uploadHouse.php" />
         <option value="$PROJECT_DIR$/searchresults_details.php" />
-        <option value="$PROJECT_DIR$/con_advanced-search.php" />
         <option value="$PROJECT_DIR$/con_search_simple_autocomplete.php" />
         <option value="$PROJECT_DIR$/view_head.php" />
         <option value="$PROJECT_DIR$/view_advanced-search.php" />
         <option value="$PROJECT_DIR$/view_searchresults-details.php" />
         <option value="$PROJECT_DIR$/con_image-uploads.php" />
-        <option value="$PROJECT_DIR$/SQL/final sql" />
         <option value="$PROJECT_DIR$/view_navbar-logged-in.php" />
         <option value="$PROJECT_DIR$/view_imageUpload.php" />
         <option value="$PROJECT_DIR$/con_editupload.php" />
@@ -224,8 +212,11 @@
         <option value="$PROJECT_DIR$/con_login.php" />
         <option value="$PROJECT_DIR$/con_xml-markers.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/con_xml-houses.php" />
         <option value="$PROJECT_DIR$/view_navbar.php" />
+        <option value="$PROJECT_DIR$/SQL/final sql" />
+        <option value="$PROJECT_DIR$/text.xml" />
+        <option value="$PROJECT_DIR$/con_xml-houses.php" />
+        <option value="$PROJECT_DIR$/con_advanced-search.php" />
       </list>
     </option>
   </component>
@@ -277,6 +268,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="RentMyHouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RentMyHouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RentMyHouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SQL" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -466,14 +471,20 @@
       <option name="project" value="LOCAL" />
       <updated>1433277270713</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="addes houses xml dynamic">
+      <created>1433278793028</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1433278793028</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="971" y="0" width="949" height="1160" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -549,7 +560,8 @@
     <MESSAGE value="fixed image upload" />
     <MESSAGE value="AJAX maps" />
     <MESSAGE value="AJAX maps fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="AJAX maps fixed" />
+    <MESSAGE value="addes houses xml dynamic" />
+    <option name="LAST_COMMIT_MESSAGE" value="addes houses xml dynamic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -558,13 +570,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/validator.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="819" max-vertical-offset="1260">
@@ -747,6 +752,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="13693" max-vertical-offset="41742">
           <caret line="776" column="8" selection-start-line="776" selection-start-column="8" selection-end-line="776" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -790,23 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="1692">
           <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/con_advanced-search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="864">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQL/final sql">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4545455" vertical-offset="0" max-vertical-offset="2808">
-          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -821,6 +811,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.161291" vertical-offset="0" max-vertical-offset="1738">
           <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -828,6 +819,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.225806" vertical-offset="770" max-vertical-offset="5192">
           <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -907,7 +899,7 @@
         <state vertical-scroll-proportion="-1.4193548" vertical-offset="0" max-vertical-offset="1320">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding>
-            <marker date="1433270717945" expanded="true" signature="124:324" placeholder="SELECT id, u..users..." />
+            <marker date="1433270717945" expanded="true" signature="-1:-1" placeholder="SELECT id, u..users..." />
           </folding>
         </state>
       </provider>
@@ -942,27 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/con_xml-markers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="902">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="2" />
-          <folding>
-            <marker date="1433276720989" expanded="true" signature="346:383" placeholder="SELECT longi..houses..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/con_xml-houses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.4838705" vertical-offset="0" max-vertical-offset="1166">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-          <folding>
-            <marker date="1433278386595" expanded="true" signature="346:366" placeholder="SELECT * FRO..houses..." />
-            <marker date="1433278386595" expanded="true" signature="565:695" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.064516" vertical-offset="286" max-vertical-offset="3960">
@@ -980,9 +951,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view_navbar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23084995" vertical-offset="198" max-vertical-offset="1474">
+        <state vertical-scroll-proportion="-7.096774" vertical-offset="198" max-vertical-offset="1474">
           <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/final sql">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3388">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/con_xml-markers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.838709" vertical-offset="0" max-vertical-offset="902">
+          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+          <folding>
+            <marker date="1433276720989" expanded="true" signature="346:383" placeholder="SELECT longi..houses..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/con_xml-houses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.451612" vertical-offset="462" max-vertical-offset="1606">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <marker date="1433280843034" expanded="true" signature="346:366" placeholder="SELECT * FRO..houses..." />
+            <marker date="1433280843034" expanded="true" signature="1362:1497" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/con_advanced-search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04616999" vertical-offset="0" max-vertical-offset="1298">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding>
+            <marker date="1433281027560" expanded="true" signature="408:428" placeholder="select * fro..houses..." />
+          </folding>
         </state>
       </provider>
     </entry>
