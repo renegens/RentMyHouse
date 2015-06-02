@@ -1,6 +1,6 @@
 <?php
 
-    require("config.php");
+    include_once("config.php");
     $submitted_username = '';
     if(!empty($_POST)){
         $query = "

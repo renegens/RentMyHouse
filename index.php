@@ -3,26 +3,10 @@
 
 $title = "Home Page";
 
-
+include_once ("config.php");
 require ("con_login.php");
 require("view_head.php");
 require("view_navbar.php");
-$host="localhost"; // Host name
-$username="admin"; // Mysql username
-$password="admin"; // Mysql password no password for windows root password for mac
-$dbname="rentmyhouse"; // Database name
-
-//Connect to server and select database.
-$options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
-try {
-    $db = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password, $options);
-}
-catch(PDOException $ex){
-    die("Failed to connect to the database: " . $ex->getMessage());
-}
-
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 //getting latest images
 $query = 'SELECT imageName FROM images ORDER BY imageID DESC LIMIT 4';
@@ -31,19 +15,69 @@ $statement->execute();
 foreach ($statement as $row) {
     $image[] = $row['imageName'];
 }
+?>
 
-//getting all marker
-$query = 'SELECT longitude,latitude FROM houses';
-$statement = $db->prepare($query);
-$statement->execute();
-foreach ($statement as $row) {
-    $latitude[] = $row['latitude'];
-    $longitude[] = $row['longitude'];
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<script>
+// Standard google maps function
+    function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var map = new google.maps.Map(mapCanvas);
+        var mapOptions = {
+            center: new google.maps.LatLng(39.638140, 22.450156),
+            zoom: 11,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+    }
 
+google.maps.event.addDomListener(window, 'load', initialize);
+
+downloadUrl("con_xml-markers.php", function(data) {
+    var xml = data.responseXML;
+    var markers = xml.documentElement.getElementsByTagName("markers");
+    for (var i = 0; i < markers.length; i++) {
+        var point = new google.maps.LatLng(
+            parseFloat(markers[i].getAttribute("lat")),
+            parseFloat(markers[i].getAttribute("lng")));
+        var marker = new google.maps.Marker({
+            map: map,
+            position: point
+
+        });
+        //bindInfoWindow(marker, map);
+    }
+});
+
+function bindInfoWindow(marker, map) {
+    google.maps.event.addListener(marker, 'click', function() {
+        //infoWindow.setContent(html);
+        infoWindow.open(map, marker);
+    });
+}
+function downloadUrl(url, callback) {
+    var request = window.ActiveXObject ?
+        new ActiveXObject('Microsoft.XMLHTTP') :
+        new XMLHttpRequest;
+
+    request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+            request.onreadystatechange = doNothing;
+            callback(request, request.status);
+        }
+    };
+
+    request.open('GET', url, true);
+    request.send(null);
 }
 
 
-?>
+function doNothing() {}
+
+
+
+
+</script>
 
 
 <!--                  CAROUSEL                          -->
@@ -99,7 +133,7 @@ foreach ($statement as $row) {
         <div class="col-lg-12 text-center">
             <h1>One Column Row Example</h1>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna</p>
-            <a class="btn btn-lg btn-primary" href="http://www.responsivewebmobile.com">Back to RWM</a>
+            <a class="btn btn-lg btn-primary" href="http://www.responsivewebmobile.com">Back to Rent My House</a>
         </div>
     </div>
 </div>
@@ -134,64 +168,9 @@ foreach ($statement as $row) {
         </div>
     </div>
 </div>
-<div style="display: none;" id="myArrayLatitude">
-    <?php
-    echo '<span id="myArrayLatitude.count">'.sizeof($latitude).'</span>';
-    for ($i = 0; $i < sizeof($latitude); $i++) {
-        echo '<span id="myArrayLatitude.'.$i.'">'.$latitude[$i].'</span>';
-    }
-    ?>
-</div>
-<div style="display: none;" id="myArrayLongitude">
-    <?php
-    echo '<span id="myArrayLongitude.count">'.sizeof($longitude).'</span>';
-    for ($i = 0; $i < sizeof($longitude); $i++) {
-        echo '<span id="myArrayLongitude.'.$i.'">'.$longitude[$i].'</span>';
-    }
-    ?>
-</div>
 
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 <div class="container-fluid" style="height: 500px; width: 1000px;" id="map-canvas"></div>
-<script type="text/javascript">
-    var myArrayLatitude = [];
-    var myArrayLongitude = [];
-    //needs to be fixed. Logic is store the php array inside a javascript array and loop through it.
-    for(i = 0; i < document.getElementById('myArrayLatitude.count').innerHTML; i++) {
-        myArrayLatitude.add(document.getElementById('myArrayLatitude.'+i)
-        document.write(document.getElementById('myArrayLatitude.'+i).innerHTML);
-    }
-    for(i = 0; i < document.getElementById('myArrayLongitude.count').innerHTML; i++) {
-        document.write(document.getElementById('myArrayLongitude.'+i).innerHTML);
-    }
 
-    // Standard google maps function
-    function initialize() {
-        var myLatlng = new google.maps.LatLng(myArrayLatitude[i], myArrayLongitude[i]);
-        var myOptions = {
-            zoom: 12,
-            center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-    }
-
-    // Function for adding a marker to the page.
-    function addMarker(location) {
-        marker = new google.maps.Marker({
-            position: location,
-            map: map
-        });
-    }
-    for (i=0; i<myArrayLatitude.length; i++){
-        // Testing the addMarker function
-        CentralPark = new google.maps.LatLng(myArrayLatitude[i], myArrayLongitude[i]);
-        addMarker(CentralPark);
-    }
-
-
-
-</script>
 
 
 
