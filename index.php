@@ -3,26 +3,11 @@
 
 $title = "Home Page";
 
-
+include_once("config.php");
 require ("con_login.php");
 require("view_head.php");
 require("view_navbar.php");
-$host="localhost"; // Host name
-$username="admin"; // Mysql username
-$password="admin"; // Mysql password no password for windows root password for mac
-$dbname="rentmyhouse"; // Database name
 
-//Connect to server and select database.
-$options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
-try {
-    $db = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password, $options);
-}
-catch(PDOException $ex){
-    die("Failed to connect to the database: " . $ex->getMessage());
-}
-
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 //getting latest images
 $query = 'SELECT imageName FROM images ORDER BY imageID DESC LIMIT 4';
