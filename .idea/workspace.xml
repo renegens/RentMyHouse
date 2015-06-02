@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5504746d-8a34-4775-b045-e8d831cc8f31" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/con_xml-markers.php" afterPath="$PROJECT_DIR$/con_xml-markers.php" />
+    <list default="true" id="5504746d-8a34-4775-b045-e8d831cc8f31" name="Default" comment="AJAX maps">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -80,15 +79,15 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23084995" vertical-offset="594" max-vertical-offset="4180">
-              <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.3924449" vertical-offset="286" max-vertical-offset="3960">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-                <marker date="1433276740027" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
+                <marker date="1433277261878" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
               </folding>
             </state>
           </provider>
@@ -457,7 +456,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433276420769</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="AJAX maps">
+      <created>1433276791639</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1433276791639</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -572,7 +577,7 @@
             <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <marker date="1433276740027" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
+            <marker date="1433277261878" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
           </folding>
         </state>
       </provider>
@@ -622,7 +627,7 @@
             <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <marker date="1433276740027" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
+            <marker date="1433277261878" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
           </folding>
         </state>
       </provider>
@@ -665,7 +670,7 @@
             <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <marker date="1433276740027" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
+            <marker date="1433277261878" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
           </folding>
         </state>
       </provider>
@@ -959,15 +964,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23084995" vertical-offset="594" max-vertical-offset="4180">
-          <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.3924449" vertical-offset="286" max-vertical-offset="3960">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <marker date="1433276740027" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
+            <marker date="1433277261878" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
           </folding>
         </state>
       </provider>

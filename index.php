@@ -19,16 +19,17 @@ foreach ($statement as $row) {
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 <script>
+    var map;
 // Standard google maps function
     function initialize() {
         var mapCanvas = document.getElementById('map-canvas');
-        var map = new google.maps.Map(mapCanvas);
+        //var map = new google.maps.Map(mapCanvas);
         var mapOptions = {
             center: new google.maps.LatLng(39.638140, 22.450156),
             zoom: 11,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
-        var map = new google.maps.Map(mapCanvas, mapOptions);
+        map = new google.maps.Map(mapCanvas, mapOptions);
     }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -45,16 +46,10 @@ downloadUrl("con_xml-markers.php", function(data) {
             position: point
 
         });
-        //bindInfoWindow(marker, map);
+
     }
 });
 
-function bindInfoWindow(marker, map) {
-    google.maps.event.addListener(marker, 'click', function() {
-        //infoWindow.setContent(html);
-        infoWindow.open(map, marker);
-    });
-}
 function downloadUrl(url, callback) {
     var request = window.ActiveXObject ?
         new ActiveXObject('Microsoft.XMLHTTP') :
@@ -71,12 +66,7 @@ function downloadUrl(url, callback) {
     request.send(null);
 }
 
-
 function doNothing() {}
-
-
-
-
 </script>
 
 
