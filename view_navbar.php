@@ -17,6 +17,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="housestatic.xml">Static XML</a></li>
+                <li><a href="con_xml-houses.php">Dynamic XML</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                     <ul class="dropdown-menu">

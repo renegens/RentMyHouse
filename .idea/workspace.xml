@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5504746d-8a34-4775-b045-e8d831cc8f31" name="Default" comment="AJAX maps">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+    <list default="true" id="5504746d-8a34-4775-b045-e8d831cc8f31" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/con_xml-houses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_navbar.php" afterPath="$PROJECT_DIR$/view_navbar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -38,22 +39,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="con_upload-images.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/con_upload-images.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4290" max-vertical-offset="6644">
-              <caret line="224" column="9" selection-start-line="196" selection-start-column="5" selection-end-line="224" selection-end-column="9" />
-              <folding>
-                <marker date="1433107602123" expanded="true" signature="464:611" placeholder="SELECT id FR..users..." />
-                <marker date="1433107602123" expanded="true" signature="980:1136" placeholder="SELECT house..houses..." />
-                <marker date="1433107602123" expanded="true" signature="7228:7556" placeholder="INSERT INTO ..." />
-                <marker date="1433107602123" expanded="true" signature="8023:8351" placeholder="INSERT INTO ..." />
-                <marker date="1433107602123" expanded="true" signature="8821:9149" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="con_search_simple_autocomplete.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/con_search_simple_autocomplete.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3924449" vertical-offset="286" max-vertical-offset="3960">
+            <state vertical-scroll-proportion="-12.064516" vertical-offset="286" max-vertical-offset="3960">
               <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -96,10 +81,23 @@
       <file leaf-file-name="con_xml-markers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/con_xml-markers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.741936" vertical-offset="0" max-vertical-offset="902">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="902">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="2" />
               <folding>
                 <marker date="1433276720989" expanded="true" signature="346:383" placeholder="SELECT longi..houses..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="con_xml-houses.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/con_xml-houses.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.4838705" vertical-offset="0" max-vertical-offset="1166">
+              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+              <folding>
+                <marker date="1433278386595" expanded="true" signature="346:366" placeholder="SELECT * FRO..houses..." />
+                <marker date="1433278386595" expanded="true" signature="565:695" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -110,6 +108,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="1240" max-vertical-offset="2222">
               <caret line="85" column="21" selection-start-line="83" selection-start-column="8" selection-end-line="87" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_navbar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view_navbar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.23084995" vertical-offset="198" max-vertical-offset="1474">
+              <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -151,16 +159,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="968">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="20" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -177,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/con_userlogin.php" />
         <option value="$PROJECT_DIR$/includes/createform.php" />
         <option value="$PROJECT_DIR$/controllers/signup_ac.php" />
@@ -210,7 +207,6 @@
         <option value="$PROJECT_DIR$/searchresults_details.php" />
         <option value="$PROJECT_DIR$/con_advanced-search.php" />
         <option value="$PROJECT_DIR$/con_search_simple_autocomplete.php" />
-        <option value="$PROJECT_DIR$/view_navbar.php" />
         <option value="$PROJECT_DIR$/view_head.php" />
         <option value="$PROJECT_DIR$/view_advanced-search.php" />
         <option value="$PROJECT_DIR$/view_searchresults-details.php" />
@@ -228,6 +224,8 @@
         <option value="$PROJECT_DIR$/con_login.php" />
         <option value="$PROJECT_DIR$/con_xml-markers.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/con_xml-houses.php" />
+        <option value="$PROJECT_DIR$/view_navbar.php" />
       </list>
     </option>
   </component>
@@ -462,7 +460,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433276791639</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="AJAX maps fixed">
+      <created>1433277270713</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1433277270713</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -477,7 +481,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2642998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2636656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -544,7 +548,8 @@
     <MESSAGE value="TODO revert previous logic" />
     <MESSAGE value="fixed image upload" />
     <MESSAGE value="AJAX maps" />
-    <option name="LAST_COMMIT_MESSAGE" value="AJAX maps" />
+    <MESSAGE value="AJAX maps fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="AJAX maps fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -553,13 +558,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view_register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1458">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/validator.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
@@ -854,14 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view_navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1452">
-          <caret line="15" column="80" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/con_register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1055" max-vertical-offset="2068">
@@ -887,11 +877,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="4290" max-vertical-offset="6644">
           <caret line="224" column="9" selection-start-line="196" selection-start-column="5" selection-end-line="224" selection-end-column="9" />
           <folding>
-            <marker date="1433107602123" expanded="true" signature="464:611" placeholder="SELECT id FR..users..." />
-            <marker date="1433107602123" expanded="true" signature="980:1136" placeholder="SELECT house..houses..." />
-            <marker date="1433107602123" expanded="true" signature="7228:7556" placeholder="INSERT INTO ..." />
-            <marker date="1433107602123" expanded="true" signature="8023:8351" placeholder="INSERT INTO ..." />
-            <marker date="1433107602123" expanded="true" signature="8821:9149" placeholder="INSERT INTO ..." />
+            <marker date="1433107602123" expanded="true" signature="-1:-1" placeholder="SELECT id FR..users..." />
+            <marker date="1433107602123" expanded="true" signature="-1:-1" placeholder="SELECT house..houses..." />
+            <marker date="1433107602123" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1433107602123" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1433107602123" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -954,17 +944,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/con_xml-markers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.741936" vertical-offset="0" max-vertical-offset="902">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="902">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="2" />
           <folding>
             <marker date="1433276720989" expanded="true" signature="346:383" placeholder="SELECT longi..houses..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/con_xml-houses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.4838705" vertical-offset="0" max-vertical-offset="1166">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding>
+            <marker date="1433278386595" expanded="true" signature="346:366" placeholder="SELECT * FRO..houses..." />
+            <marker date="1433278386595" expanded="true" signature="565:695" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3924449" vertical-offset="286" max-vertical-offset="3960">
+        <state vertical-scroll-proportion="-12.064516" vertical-offset="286" max-vertical-offset="3960">
           <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -974,6 +975,14 @@
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
             <marker date="1433277261878" expanded="true" signature="176:234" placeholder="SELECT image..images..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23084995" vertical-offset="198" max-vertical-offset="1474">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
