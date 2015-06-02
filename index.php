@@ -35,7 +35,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 downloadUrl("con_xml-markers.php", function(data) {
     var xml = data.responseXML;
-    var markers = xml.documentElement.getElementsByTagName("markers");
+    var markers = xml.documentElement.getElementsByTagName("marker");
     for (var i = 0; i < markers.length; i++) {
         var point = new google.maps.LatLng(
             parseFloat(markers[i].getAttribute("lat")),

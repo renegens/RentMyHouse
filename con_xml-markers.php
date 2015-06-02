@@ -23,6 +23,7 @@ echo '<markers>';
 
 // Iterate through the rows, printing XML nodes for each
 foreach ($statement as $row) {
+    echo '<marker ';
     echo 'lat="' . $row['latitude'] . '" ';
     echo 'lng="' . $row['longitude'] . '" ';
     echo '/>';
