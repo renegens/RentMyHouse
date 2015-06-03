@@ -9,9 +9,11 @@ if (isset($_GET['price'])){$price = $_GET['price'];}
 
 if (isset($_GET['wifi'])){$wifi = $_GET['wifi'];}
 
-if (isset($_GET['pool'])){$state = $_GET['pool'];}
+if (isset($_GET['pool'])){$pool = $_GET['pool'];}
 
-if (isset($_GET['maid'])){$state = $_GET['maid'];}
+if (isset($_GET['maid'])){$maid = $_GET['maid'];}
+
+require "config.php";
 
 $sql = "select * from houses";
 $c=0;
@@ -19,9 +21,7 @@ $pricestate = false;
 $locationstate = false;
 
 if($price!=null){
-    $sql += "WHERE price = :price";
-    $count+=10;
-    $pricestate = true;}
+    $sql += "WHERE price = :price"; $count+=10; $pricestate = true;}
 if($location != null)
 {
     $locationstate = true;
@@ -33,18 +33,6 @@ if($location != null)
     }
     $count+=20;
 }
-
-$query_params = array( ':state' => $state,
-                        ':price' => $price);
-try {
-    $stmt = $db->prepare($query);
-    $result = $stmt->execute($query_params);
-}
-catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
-$row = $stmt->fetch();
-
-
-
 
 
 ?>

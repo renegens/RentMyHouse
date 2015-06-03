@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5504746d-8a34-4775-b045-e8d831cc8f31" name="Default" comment="dtd for xml">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/home9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL/127_0_0_1.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/con_advanced-search.php" afterPath="$PROJECT_DIR$/con_advanced-search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_head.php" afterPath="$PROJECT_DIR$/view_head.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_navbar-logged-in.php" afterPath="$PROJECT_DIR$/view_navbar-logged-in.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_navbar.php" afterPath="$PROJECT_DIR$/view_navbar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -39,33 +54,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="con_advanced-search.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/con_advanced-search.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2554028" vertical-offset="109" max-vertical-offset="1034">
-              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            <state vertical-scroll-proportion="-93.67742" vertical-offset="132" max-vertical-offset="3982">
+              <caret line="138" column="16" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="46" />
               <folding>
-                <marker date="1433285166173" expanded="true" signature="429:449" placeholder="select * fro..houses..." />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+                <marker date="1433293188660" expanded="true" signature="176:234" placeholder="SELECT image..houses..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_advanced-search.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view_advanced-search.php">
+      <file leaf-file-name="view_head.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view_head.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5161295" vertical-offset="66" max-vertical-offset="2068">
-              <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+            <state vertical-scroll-proportion="-7.612903" vertical-offset="72" max-vertical-offset="792">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_navbar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view_navbar.php">
+      <file leaf-file-name="view_footer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view_footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.096774" vertical-offset="198" max-vertical-offset="1474">
-              <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.41404012" vertical-offset="63" max-vertical-offset="792">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,23 +91,29 @@
       <file leaf-file-name="view_uploadHouse.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view_uploadHouse.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="12.032258" vertical-offset="3299" max-vertical-offset="4268">
+            <state vertical-scroll-proportion="-94.3871" vertical-offset="0" max-vertical-offset="4268">
               <caret line="133" column="22" selection-start-line="133" selection-start-column="22" selection-end-line="133" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="con_uploadhouse.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/con_uploadhouse.php">
+      <file leaf-file-name="view_navbar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view_navbar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.967742" vertical-offset="2112" max-vertical-offset="4466">
-              <caret line="103" column="6" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
-              <folding>
-                <marker date="1433102412435" expanded="true" signature="2812:2927" placeholder="SELECT id FR..users..." />
-                <marker date="1433102412435" expanded="true" signature="3373:3468" placeholder="SELECT 1 FRO..houses..." />
-                <marker date="1433102412435" expanded="true" signature="4029:4939" placeholder="INSERT INTO ..." />
-              </folding>
+            <state vertical-scroll-proportion="8.4838705" vertical-offset="813" max-vertical-offset="1320">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_navbar-logged-in.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view_navbar-logged-in.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="418">
+              <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/createform.php" />
         <option value="$PROJECT_DIR$/controllers/signup_ac.php" />
         <option value="$PROJECT_DIR$/con_usercreate.php" />
         <option value="$PROJECT_DIR$/con_register.php" />
@@ -144,10 +166,8 @@
         <option value="$PROJECT_DIR$/view_advanced-search.php" />
         <option value="$PROJECT_DIR$/view_searchresults-details.php" />
         <option value="$PROJECT_DIR$/con_image-uploads.php" />
-        <option value="$PROJECT_DIR$/view_navbar-logged-in.php" />
         <option value="$PROJECT_DIR$/view_imageUpload.php" />
         <option value="$PROJECT_DIR$/con_editupload.php" />
-        <option value="$PROJECT_DIR$/con_uploadhouse.php" />
         <option value="$PROJECT_DIR$/model_edithouse.php" />
         <option value="$PROJECT_DIR$/con_upload-images.php" />
         <option value="$PROJECT_DIR$/view_image-gallery.php" />
@@ -155,13 +175,16 @@
         <option value="$PROJECT_DIR$/view_uploadHouse.php" />
         <option value="$PROJECT_DIR$/con_login.php" />
         <option value="$PROJECT_DIR$/con_xml-markers.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/view_navbar.php" />
         <option value="$PROJECT_DIR$/SQL/final sql" />
         <option value="$PROJECT_DIR$/text.xml" />
         <option value="$PROJECT_DIR$/con_xml-houses.php" />
-        <option value="$PROJECT_DIR$/view_head.php" />
         <option value="$PROJECT_DIR$/con_advanced-search.php" />
+        <option value="$PROJECT_DIR$/con_uploadhouse.php" />
+        <option value="$PROJECT_DIR$/view_navbar.php" />
+        <option value="$PROJECT_DIR$/view_navbar-logged-in.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/view_head.php" />
+        <option value="$PROJECT_DIR$/view_footer.php" />
       </list>
     </option>
   </component>
@@ -170,10 +193,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1288" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1936" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -231,6 +254,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RentMyHouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RentMyHouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RentMyHouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RentMyHouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -253,6 +304,8 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\RentMyHouse\SQL" />
+      <recent name="C:\xampp\htdocs\RentMyHouse\css" />
+      <recent name="C:\xampp\htdocs\RentMyHouse\js" />
       <recent name="C:\xampp\htdocs\RentMyHouse" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -429,22 +482,28 @@
       <option name="project" value="LOCAL" />
       <updated>1433281104537</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="dtd for xml">
+      <created>1433285243718</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1433285243718</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2728146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13697916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -529,11 +588,8 @@
           <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <marker date="1433277261878" expanded="true" signature="-1:-1" placeholder="SELECT image..images..." />
+            <marker date="1433293188660" expanded="true" signature="176:234" placeholder="SELECT image..houses..." />
           </folding>
         </state>
       </provider>
@@ -579,11 +635,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <marker date="1433277261878" expanded="true" signature="-1:-1" placeholder="SELECT image..images..." />
+            <marker date="1433293188660" expanded="true" signature="176:234" placeholder="SELECT image..houses..." />
           </folding>
         </state>
       </provider>
@@ -622,11 +675,8 @@
           <caret line="53" column="52" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <marker date="1433277261878" expanded="true" signature="-1:-1" placeholder="SELECT image..images..." />
+            <marker date="1433293188660" expanded="true" signature="176:234" placeholder="SELECT image..houses..." />
           </folding>
         </state>
       </provider>
@@ -684,13 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
           <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view_footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.666666" vertical-offset="0" max-vertical-offset="738">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -775,13 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view_navbar-logged-in.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.677419" vertical-offset="0" max-vertical-offset="506">
-          <caret line="8" column="0" selection-start-line="7" selection-start-column="42" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/con_register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1055" max-vertical-offset="2068">
@@ -842,42 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view_uploadHouse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.032258" vertical-offset="3299" max-vertical-offset="4268">
-          <caret line="133" column="22" selection-start-line="133" selection-start-column="22" selection-end-line="133" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/con_uploadhouse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.967742" vertical-offset="2112" max-vertical-offset="4466">
-          <caret line="103" column="6" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
-          <folding>
-            <marker date="1433102412435" expanded="true" signature="2812:2927" placeholder="SELECT id FR..users..." />
-            <marker date="1433102412435" expanded="true" signature="3373:3468" placeholder="SELECT 1 FRO..houses..." />
-            <marker date="1433102412435" expanded="true" signature="4029:4939" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view_navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.096774" vertical-offset="198" max-vertical-offset="1474">
-          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view_head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.221942" vertical-offset="0" max-vertical-offset="793">
-          <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/con_xml-houses.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7096774" vertical-offset="462" max-vertical-offset="1606">
@@ -910,21 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47162673" vertical-offset="286" max-vertical-offset="3960">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <marker date="1433277261878" expanded="true" signature="-1:-1" placeholder="SELECT image..images..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/con_search_simple_autocomplete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41614124" vertical-offset="132" max-vertical-offset="1210">
@@ -948,8 +933,72 @@
         <state vertical-scroll-proportion="1.2554028" vertical-offset="109" max-vertical-offset="1034">
           <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding>
-            <marker date="1433285166173" expanded="true" signature="429:449" placeholder="select * fro..houses..." />
+            <marker date="1433285166173" expanded="true" signature="-1:-1" placeholder="select * fro..houses..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/con_uploadhouse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4466">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1433102412435" expanded="true" signature="-1:-1" placeholder="SELECT id FR..users..." />
+            <marker date="1433102412435" expanded="true" signature="-1:-1" placeholder="SELECT 1 FRO..houses..." />
+            <marker date="1433102412435" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_uploadHouse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-94.3871" vertical-offset="0" max-vertical-offset="4268">
+          <caret line="133" column="22" selection-start-line="133" selection-start-column="22" selection-end-line="133" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.4838705" vertical-offset="813" max-vertical-offset="1320">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_navbar-logged-in.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="418">
+          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-93.67742" vertical-offset="132" max-vertical-offset="3982">
+          <caret line="138" column="16" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <marker date="1433293188660" expanded="true" signature="176:234" placeholder="SELECT image..houses..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.612903" vertical-offset="72" max-vertical-offset="792">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41404012" vertical-offset="63" max-vertical-offset="792">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

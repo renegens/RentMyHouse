@@ -9,7 +9,7 @@ require("view_head.php");
 require("view_navbar.php");
 
 //getting latest images
-$query = 'SELECT imageName FROM images ORDER BY imageID DESC LIMIT 4';
+$query = 'SELECT imageName FROM houses ORDER BY houseID DESC LIMIT 4';
 $statement = $db->prepare($query);
 $statement->execute();
 foreach ($statement as $row) {
@@ -26,7 +26,7 @@ foreach ($statement as $row) {
         //var map = new google.maps.Map(mapCanvas);
         var mapOptions = {
             center: new google.maps.LatLng(39.638140, 22.450156),
-            zoom: 11,
+            zoom: 7,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         map = new google.maps.Map(mapCanvas, mapOptions);
@@ -158,6 +158,7 @@ function doNothing() {}
         </div>
     </div>
 </div>
+
 
 <div class="container-fluid" style="height: 500px; width: 1000px;" id="map-canvas"></div>
 
