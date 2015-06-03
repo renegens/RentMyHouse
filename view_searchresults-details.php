@@ -4,10 +4,10 @@ require("config.php");
 
 
 if (isset($_GET['simpleSearch'])){
-    $query = ("SELECT * FROM houses WHERE name=:name");
+    $query = ("SELECT * FROM houses WHERE state=:state ");
     try {
         $statement = $db->prepare($query);
-        $statement->execute(array(':name'=> $_GET['simpleSearch']));
+        $statement->execute(array(':state'=> $_GET['simpleSearch']));
         if ($statement->rowCount() > 0){
         while ($row = $statement->fetch()) {
             $name = $row['name'];
@@ -39,10 +39,13 @@ require("view_head.php");
 require("view_navbar.php");
 
 ?>
-
+<div class="row">
+    <h4 class="well text-center">Search Result for <?php echo $state?> </h4>
+</div>
     <div class="container">
         <div class="row">
-                <ul class="list-group pull-left">
+            <div class="col-md-6">
+                <ul class="list-group">
                     <li class="list-group-item">Name: <?php echo $name ?></li>
                     <li class="list-group-item">State: <?php echo $state ?></li>
                     <li class="list-group-item">Address: <?php echo $address ?></li>
@@ -54,12 +57,12 @@ require("view_navbar.php");
                     <li class="list-group-item">Maid: <?php if ($maid==1){echo "Yes";} else {echo "No";} ?></li>
                     <li class="list-group-item">Description: <?php echo $description ?></li>
                     <li class="list-group-item">Stars: <?php echo $stars ?></li>
-                    <li class="list-group-item">Longitude: <?php echo $longitude ?></li>
-                    <li class="list-group-item">Latitude: <?php echo $latitude ?></li>
                 </ul>
-            <img class="img-responsive pull-right" src="<?php echo $imageLink; ?>">
             </div>
-
+            <div class="col-md-6">
+                <img class="img-responsive img-rounded" src="<?php echo $imageLink; ?>">
+            </div>
+        </div>
     </div>
 
     <div class="container">

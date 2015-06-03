@@ -6,6 +6,7 @@
                     <li><a href="view_uploadHouse.php">Upload House</a></li>
                     <li><a href="model_edithouse.php">Edit House</a></li>
                     <li><a href="view_imageUpload.php">Upload Images</a></li>
+                    <li><a href="view_image-gallery.php">Image Gallery</a></li>
                     <li class="divider"></li>
                     <li><a href="con_logout.php">Logout</a></li>
                 </ul>

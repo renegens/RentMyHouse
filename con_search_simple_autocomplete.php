@@ -19,7 +19,7 @@ function searchForKeyword($keyword) {
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-    $stmt = $db->prepare("SELECT name as name FROM houses WHERE name LIKE ? ORDER BY name");
+    $stmt = $db->prepare("SELECT state FROM houses WHERE state LIKE ?");
 
     $keyword = $keyword . '%';
     $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);

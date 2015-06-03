@@ -27,6 +27,7 @@ $row = $stmt->fetch();
 if($row){ $userid=$row['id']; }
 
 
+
 //get house id for this user
 
 $query = "
@@ -44,6 +45,7 @@ try {
 catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
 $row = $stmt->fetch();
 if($row){ $houseID=$row['houseID']; }
+
 
 
         //1 File check make a function of this if time

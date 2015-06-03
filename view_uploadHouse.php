@@ -9,14 +9,12 @@
 require "view_head.php";
 require "view_navbar.php";
 ?>
-
+    <div class="row">
+        <h4 class="well text-center">Upload House Info</h4>
+    </div>
     <div class="col-lg-4 col-lg-offset-4">
-        <h2 class="text-center">Admin Panel</h2>
         <form class="form-horizontal" method="post" action="con_uploadhouse.php" enctype="multipart/form-data">
             <fieldset>
-
-                <!-- Form Name -->
-                <legend class="text-center">Upload your house info</legend>
 
                 <!-- Text input-->
                 <div class="form-group">

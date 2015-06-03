@@ -62,15 +62,14 @@ try {
 require "view_head.php";
 require "view_navbar.php";
 ?>
+    <div class="row">
+        <h4 class="well text-center">Edit House Info</h4>
+    </div>
 
 <div class="col-lg-6 col-lg-offset-2">
-    <h2 class="text-center">Admin Panel</h2>
+
     <form class="form-horizontal" method="post" action="con_editupload.php" >
         <fieldset>
-
-            <!-- Form Name -->
-            <legend class="text-center">Edit your house info</legend>
-
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="housename">House Name</label>

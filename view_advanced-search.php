@@ -8,12 +8,12 @@ include ("view_navbar.php");
 ?>
 
 <div class="col-lg-4 col-lg-offset-4">
-    <h2 class="text-center">Advanced Search</h2>
+    <div class="row">
+        <h4 class="well text-center">Advanced Search</h4>
+    </div>
+
     <form class="form-horizontal" method="get" action="con_advanced-search.php">
         <fieldset>
-
-            <!-- Form Name -->
-            <legend class="text-center">Enter Search Criteria</legend>
 
             <!-- Select Multiple -->
             <div class="form-group">

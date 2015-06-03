@@ -12,7 +12,9 @@ include "view_head.php";
 include "view_navbar.php";
 ?>
 
-<h2 class="text-center">Upload Images</h2>
+    <div class="row">
+        <h4 class="well text-center">Image Upload</h4>
+    </div>
 <form class="form-horizontal" method="post" action="con_upload-images.php" enctype="multipart/form-data">
     <fieldset>
         <!-- File Button 1-->
