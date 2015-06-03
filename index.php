@@ -136,24 +136,41 @@ function doNothing() {}
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <a href="#" class="thumbnail">
-                    <img class="img-square img-responsive" style="width: 100%" src="<?php echo $image[0] ?>" alt="" />
+                <a href="#">
+                    <img class="thumbnail img-responsive" src="<?php echo $image[0] ?>" alt="" />
                 </a>
             </div>
             <div class="col-lg-3">
-                <a href="#" class="thumbnail">
-                    <img class="img-square img-responsive" style="width: 100%" src="<?php echo $image[1] ?>" alt="" />
+                <a href="#">
+                    <img class="thumbnail img-responsive"src="<?php echo $image[1] ?>" alt="" />
                 </a>
             </div>
             <div class="col-lg-3">
-                <a href="#" class="thumbnail">
-                    <img class="img-square img-responsive" style="width: 100%" src="<?php echo $image[2] ?>" alt="" />
+                <a href="#">
+                    <img class="thumbnail img-responsive"src="<?php echo $image[2] ?>" alt="" />
                 </a>
             </div>
             <div class="col-lg-3">
-                <a href="#" class="thumbnail">
-                    <img class="img-square img-responsive" style="width: 100%" src="<?php echo $image[3] ?>" alt="" />
+                <a href="#">
+                    <img class="thumbnail img-responsive" src="<?php echo $image[3] ?>" alt="" />
                 </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
