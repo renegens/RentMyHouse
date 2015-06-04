@@ -74,26 +74,29 @@ require_once "view_navbar.php";
                     <h3 class="lead text-center"><?php if (!empty($imageDescr[0])) echo $imageDescr[0]; else echo "No Image" ?></h3>
                     <form name="deleteImageX" method="GET" action="con_delete-images.php">
                         <input type="hidden" name="id" value="<?php echo $imageID[0] ?>" />
+                        <input type="hidden" name="imageName" value="<?php echo $image[0] ?>" />
                         <input class="btn btn-danger center-block" type="submit" value="delete"/>
                     </form>
                 </div>
                 <div class="col-lg-4">
                     <a href="#">
-                        <img class="thumbnail img-responsive"src="<?php if (!empty($image[1])) echo $image[0]; else echo "img/no_image.gif" ?>" alt="<?php echo $imageDescr[1] ?>" />
+                        <img class="thumbnail img-responsive"src="<?php if (!empty($image[1])) echo $image[1]; else echo "img/no_image.gif" ?>" alt="<?php echo $imageDescr[1] ?>" />
                     </a>
                     <h3 class="lead text-center"><?php if (!empty($imageDescr[1])) echo $imageDescr[1]; else echo "No Image" ?></h3>
                     <form name="deleteImageX" method="GET" action="con_delete-images.php">
                         <input type="hidden" name="id" value="<?php echo $imageID[1] ?>" />
+                        <input type="hidden" name="imageName" value="<?php echo $image[1] ?>" />
                         <input class="btn btn-danger center-block" type="submit" value="delete"/>
                     </form>
                 </div>
                 <div class="col-lg-4">
                     <a href="#">
-                        <img class="thumbnail img-responsive"src="<?php if (!empty($image[2])) echo $image[0]; else echo "img/no_image.gif" ?>" alt="<?php echo $imageDescr[2] ?>" />
+                        <img class="thumbnail img-responsive"src="<?php if (!empty($image[2])) echo $image[2]; else echo "img/no_image.gif" ?>" alt="<?php echo $imageDescr[2] ?>" />
                     </a>
                     <h3 class="lead text-center"><?php if (!empty($imageDescr[2])) echo $imageDescr[2]; else echo "No Image" ?></h3>
                     <form name="deleteImageX" method="GET" action="con_delete-images.php">
                         <input type="hidden" name="id" value="<?php echo $imageID[2] ?>" />
+                        <input type="hidden" name="imageName" value="<?php echo $image[2] ?>" />
                         <input class="btn btn-danger center-block" type="submit" value="delete"/>
                     </form>
                 </div>

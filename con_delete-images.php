@@ -2,14 +2,21 @@
 require_once "config.php";
 
 $id = $_GET['id'];
+$imageName = $_GET['imageName'];
+
+
+
 
 if (isset($_SESSION['username'])){
+
+
+    unlink($imageName);
 
     $query = "DELETE FROM images WHERE imageID=".$id;
 
     try {
         $stmt = $db->prepare($query);
-        $result = $stmt->execute($query_params);
+        $result = $stmt->execute();
 
     }catch (PDOException $e) {
         echo 'PDO Exception: '.$e->getMessage();}

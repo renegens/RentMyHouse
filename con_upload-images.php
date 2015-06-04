@@ -1,5 +1,5 @@
 <?php
-require "config.php";
+require_once "config.php";
         //Check if decrptions exists and then upload files.
         if(empty($_POST['imageDescr1']))
         { die("Please Enter an image description."); }
@@ -60,7 +60,7 @@ if($row){ $houseID=$row['houseID']; }
         if (isset($_POST["submit"])) {
             $check = getimagesize($_FILES["fileToUpload1"]["tmp_name"]);
             if ($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
+                //echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
             } else {
                 echo "File is not an image.";
@@ -90,7 +90,7 @@ if($row){ $houseID=$row['houseID']; }
             // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["fileToUpload1"]["tmp_name"], $target_file)) {
-                echo "The file " . basename($_FILES["fileToUpload1"]["name"]) . " has been uploaded.";
+                //echo "The file " . basename($_FILES["fileToUpload1"]["name"]) . " has been uploaded.";
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }
@@ -108,7 +108,7 @@ if($row){ $houseID=$row['houseID']; }
         if (isset($_POST["submit"])) {
             $check = getimagesize($_FILES["fileToUpload2"]["tmp_name"]);
             if ($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
+                //echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
             } else {
                 echo "File is not an image.";
@@ -138,7 +138,7 @@ if($row){ $houseID=$row['houseID']; }
             // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["fileToUpload2"]["tmp_name"], $target_file2)) {
-                echo "The file " . basename($_FILES["fileToUpload2"]["name"]) . " has been uploaded.";
+                //echo "The file " . basename($_FILES["fileToUpload2"]["name"]) . " has been uploaded.";
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }
@@ -157,7 +157,7 @@ if($row){ $houseID=$row['houseID']; }
         if (isset($_POST["submit"])) {
             $check = getimagesize($_FILES["fileToUpload3"]["tmp_name"]);
             if ($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
+                //echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
             } else {
                 echo "File is not an image.";
@@ -187,7 +187,7 @@ if($row){ $houseID=$row['houseID']; }
             // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["fileToUpload3"]["tmp_name"], $target_file3)) {
-                echo "The file " . basename($_FILES["fileToUpload3"]["name"]) . " has been uploaded.";
+                //echo "The file " . basename($_FILES["fileToUpload3"]["name"]) . " has been uploaded.";
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }
@@ -288,11 +288,7 @@ if($row){ $houseID=$row['houseID']; }
             die("Failed to run query: " . $ex->getMessage());
         }
 
-    header("Location: index.php?msg=Data Entry Success");
+    header("Location: view_image-gallery.php?msg=Data Entry Success");
     die("Redirecting to index.php");
-
-
-
-
 ?>
 
