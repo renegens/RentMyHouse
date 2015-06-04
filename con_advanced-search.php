@@ -7,33 +7,37 @@ if (isset($_GET['state'])){$state = $_GET['state'];}
 
 if (isset($_GET['price'])){$price = $_GET['price'];}
 
-if (isset($_GET['wifi'])){$wifi = $_GET['wifi'];}
+if(empty($_GET['wifi']))
+{$wifi = 0;}
+else $wifi = 1;
 
-if (isset($_GET['pool'])){$pool = $_GET['pool'];}
+if(empty($_GET['pool']))
+{$pool = 0;}
+else $pool = 1;
 
-if (isset($_GET['maid'])){$maid = $_GET['maid'];}
+if(empty($_GET['maid']))
+{$maid = 0;}
+else $maid = 1;
 
 require "config.php";
 
-$sql = "select * from houses";
-$c=0;
-$pricestate = false;
-$locationstate = false;
+$sql = "SELECT * FROM houses WHERE state LIKE :state AND price LIKE :price
+        AND wifi LIKE :wifi AND pool LIKE :pool AND maid LIKE :maid";
+$statement = $db->prepare($sql);
+//πέρασμα παραμέτρων και εκτέλεση ερωτήματος
+$statement->execute( array( ':state'=>$state,
+                            ':price' =>$price,
+                            ':wifi' =>$wifi,
+                            ':pool' =>$pool,
+                            ':maid' =>$maid ) );
 
-if($price!=null){
-    $sql += "WHERE price = :price"; $count+=10; $pricestate = true;}
-if($location != null)
-{
-    $locationstate = true;
-    if($count != 0)
-    {
-        $sql += "  AND location = :location";
-    }else {
-        $sql += "WHERE location = :location";
-    }
-    $count+=20;
+while ( $record = $statement-> fetch() ) {
+
+    echo $record['name'];
+
 }
-
+$statement->closeCursor();
+$pdoObject = null;
 
 ?>
 

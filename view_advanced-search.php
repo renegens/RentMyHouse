@@ -6,13 +6,13 @@ include ("view_head.php");
 include ("view_navbar.php");
 
 ?>
-
+<div class="row">
+    <h4 class="well text-center">Advanced Search</h4>
+</div>
 <div class="col-lg-4 col-lg-offset-4">
-    <div class="row">
-        <h4 class="well text-center">Advanced Search</h4>
-    </div>
 
-    <form class="form-horizontal" method="get" action="con_advanced-search.php">
+
+    <form class="form-horizontal" method="get" action="view_searchresults-details.php">
         <fieldset>
 
             <!-- Select Multiple -->
