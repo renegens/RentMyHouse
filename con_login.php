@@ -9,7 +9,8 @@
                 username,
                 password,
                 salt,
-                email
+                email,
+                active
             FROM users
             WHERE
                 username = :username
@@ -26,11 +27,13 @@
         $login_ok = false;
         $row = $stmt->fetch();
         if($row){
-            $check_password = hash('sha256', $_POST['password'] . $row['salt']);
+            $active = $row['active'];
+            $check_password = crypt($_POST['password'],$row['salt']);
+            /*$check_password = hash('sha256', $_POST['password'] . $row['salt']);
             for($round = 0; $round < 65536; $round++){
                 $check_password = hash('sha256', $check_password . $row['salt']);
-            }
-            if($check_password === $row['password']){
+            }*/
+            if($check_password === $row['password'] && $active==1){
                 $login_ok = true;
             }
         }
@@ -38,7 +41,6 @@
         if($login_ok){
             unset($row['salt']);
             unset($row['password']);
-            //to fix
             $_SESSION['user'] = $row;
             $_SESSION['username'] = $row['username'];
             $_SESSION["loggedIn"] = true;

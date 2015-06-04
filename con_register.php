@@ -52,37 +52,60 @@ if(!empty($_POST))
     $row = $stmt->fetch();
     if($row){ die("This email address is already registered"); }
 
+    //Sent Mail to user not working due to host reasons
+    $active = 0;
+    $code = rand(10000,99999);
+    $subject = "Rent My House Email Verification";
+    $message = "Hello, this the the activation code".$code;
+    $result = mail($_POST['email'], $subject , $message);
+
+
     // Add row to database 
     $query = " 
             INSERT INTO users ( 
                 username, 
                 password, 
                 salt, 
-                email 
+                email,
+                active,
+                verificationCode
             ) VALUES ( 
                 :username, 
                 :password, 
                 :salt, 
-                :email 
+                :email,
+                :active,
+                :verificationCode
             ) 
         ";
 
-    // Security measures
-    $salt = dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647));
-    $password = hash('sha256', $_POST['password'] . $salt);
-    for($round = 0; $round < 65536; $round++){ $password = hash('sha256', $password . $salt); }
+    // Security measures updated for SHA 512 with salt 6
+    $salt = '$6$'.rand(10000000,99999999).'$';
+    //$salt = dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647));
+    $password = crypt($_POST['password'], $salt); //encrypt the password
+    //$password = hash('sha256', $_POST['password'] . $salt);
+    //for($round = 0; $round < 65536; $round++){ $password = hash('sha256', $password . $salt); }
     $query_params = array(
         ':username' => $_POST['username'],
         ':password' => $password,
         ':salt' => $salt,
-        ':email' => $_POST['email']
+        ':email' => $_POST['email'],
+        ':active' => $active,
+        ':verificationCode' => $code
+
     );
     try {
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
     }
     catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
-    header("Location: index.php?msg=Account Created");
+
+
+    if ($result){
+        //store in cookie the username for late
+        $user = $_POST['username'];
+        header("Location: view_activationcode.php?user=".$user);
+    }
     die("Redirecting to index.php");
 
 }

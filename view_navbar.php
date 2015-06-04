@@ -26,7 +26,7 @@
             </ul>
 
 
-            <form class="navbar-form navbar-left" method="get" action="view_searchresults-details.php" role="search">
+            <form class="navbar-form navbar-left" method="get" action="view_state_searchresults-details.php" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" name="simpleSearch" id="keyword" placeholder="Search House Area" list="results" autocomplete="off">
                     <datalist id="results"> </datalist>

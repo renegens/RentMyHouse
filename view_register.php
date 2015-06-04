@@ -1,17 +1,18 @@
 <?php
+$title = "Register";
 include("view_head.php");
 include("view_navbar.php");
 
 ?>
-
+    <div class="row">
+        <h4 class="well text-center">Register</h4>
+    </div>
 <!--               SIGN UP FORM
    ===========================================-->
 <div class="row">
-    <br>
-    <br>
-    <br>
+
     <div class="well col-lg-4 col-lg-offset-4">
-        <h3>Sign Up</h3>
+
         <form data-toggle="validator" id="signUpForm" role="form" method="post" action="con_register.php">
             <div class="form-group">
                 <label for="inputName" class="control-label">Username</label>

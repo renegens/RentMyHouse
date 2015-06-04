@@ -12,7 +12,7 @@ include ("view_navbar.php");
 <div class="col-lg-4 col-lg-offset-4">
 
 
-    <form class="form-horizontal" method="get" action="view_searchresults-details.php">
+    <form class="form-horizontal" method="get" action="view_advanced-searchresults.php">
         <fieldset>
 
             <!-- Select Multiple -->
@@ -37,7 +37,7 @@ include ("view_navbar.php");
             <div class="form-group">
                 <label class="col-md-4 control-label" for="price">Price</label>
                 <div class="col-md-5">
-                    <input id="price" name="price" type="text" placeholder="€" class="form-control input-md" required="">
+                    <input id="price" name="price" type="text" placeholder="€" class="form-control input-md" >
 
                 </div>
             </div>
