@@ -44,30 +44,29 @@ include ("view_navbar.php");
 
 
             <!-- Multiple Checkboxes -->
-            <div class="form-group">
+            <div class="form-group" >
                 <label class="col-md-4 control-label" for="comforts">Comforts</label>
                 <div class="col-md-4">
                     <div class="checkbox">
                         <label for="comforts-0">
-                            <input type="checkbox" name="wifi" id="comforts-0" value="1">
+                            <input onclick="ajaxFunction(this);" type="checkbox" name="wifi" id="comforts-0" value="1"><span id="ajaxWifi" class="badge"></span></a>
                             Wifi
                         </label>
                     </div>
                     <div class="checkbox">
                         <label for="comforts-1">
-                            <input type="checkbox" name="pool" id="comforts-1" value="1">
+                            <input onclick="ajaxFunction(this);" type="checkbox" name="pool" id="comforts-1" value="1"><span id="ajaxPool"  class="badge"></span></a>
                             Pool
                         </label>
                     </div>
                     <div class="checkbox">
                         <label for="comforts-2">
-                            <input type="checkbox" name="maid" id="comforts-2" value="1">
+                            <input onclick="ajaxFunction(this);"  type="checkbox" name="maid" id="comforts-2" value="1"><span id="ajaxMaid" class="badge"></span></a>
                             Maid
                         </label>
                     </div>
                 </div>
             </div>
-
 
             <!-- Button (Double) -->
             <div class="form-group">
@@ -82,6 +81,41 @@ include ("view_navbar.php");
     </form>
 
 </div>
+
+<script>
+
+
+    function ajaxFunction() {
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        else {
+            alert("Your browser does not support XMLHTTP!");
+        }
+        xmlhttp.onreadystatechange=function() {
+            if(xmlhttp.readyState==4) {
+                var responseArray = xmlhttp.responseText.split("||");
+                document.getElementById("ajaxWifi").innerHTML = responseArray[0];
+                document.getElementById("ajaxPool").innerHTML = responseArray[1];
+                document.getElementById("ajaxMaid").innerHTML = responseArray[2];
+            }
+        };
+
+
+        var url= "con_ajaxsearch.php";
+
+        xmlhttp.open("GET",url,true);
+        xmlhttp.send(null);
+    }
+
+
+</script>
 
 
 <?php include ("view_footer.php"); ?>
