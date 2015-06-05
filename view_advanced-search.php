@@ -11,7 +11,7 @@ include ("view_navbar.php");
 </div>
 <div class="col-lg-4 col-lg-offset-4">
 
-
+    <form id="forXML" action="model_advancedResultsXML.php" method="post"></form>
     <form class="form-horizontal" method="get" action="model_advanced-search.php">
         <fieldset>
 
@@ -74,6 +74,9 @@ include ("view_navbar.php");
                 <div class="col-md-8">
                     <button id="search" name="search" class="btn btn-success">Search</button>
                     <button id="clear" name="clear" class="btn btn-default">Clear</button>
+                    <button id="xml" name="xml" form="forXML" class="btn btn-danger">XML</button>
+
+
                 </div>
             </div>
 
