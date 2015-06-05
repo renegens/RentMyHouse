@@ -12,7 +12,7 @@ include ("view_navbar.php");
 <div class="col-lg-4 col-lg-offset-4">
 
 
-    <form class="form-horizontal" method="get" action="view_advanced-searchresults.php">
+    <form class="form-horizontal" method="get" action="model_advanced-search.php">
         <fieldset>
 
             <!-- Select Multiple -->

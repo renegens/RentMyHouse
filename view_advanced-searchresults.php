@@ -1,114 +1,33 @@
 <?php
 $title = "Advanced Search Results";
 require_once "config.php";
-if (isset($_GET['search'])) {
-
-    if (isset($_GET['state'])) {
-        $state = $_GET['state'];
+if (isset($_GET['houseID'])) {
+    $query = ("SELECT * FROM houses WHERE houseID=:houseID ");
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute(array(':houseID' => $_GET['houseID']));
+        if ($statement->rowCount() > 0) {
+            while ($row = $statement->fetch()) {
+                $name = $row['name'];
+                $state = $row['state'];
+                $address = $row['address'];
+                $price = $row['price'];
+                $meter = $row['meter'];
+                $telephone = $row['telephone'];
+                $wifi = $row['wifi'];
+                $pool = $row['pool'];
+                $maid = $row['maid'];
+                $description = $row['description'];
+                $stars = $row['stars'];
+                $imageLink = $row['imageName'];
+                $longitude = $row['longitude'];
+                $latitude = $row['latitude'];
+            }
+        } else header('Location: view_advanced-search.php');
+    } catch (PDOException $ex) {
+        header('Location: index.php?msg=no-connection-to-server');
+        exit();
     }
-
-    if (isset($_GET['price'])) {
-        $price = $_GET['price'];
-    }
-
-    if (empty($_GET['wifi'])) {
-        $wifi = 0;
-    } else $wifi = 1;
-
-    if (empty($_GET['pool'])) {
-        $pool = 0;
-    } else $pool = 1;
-
-    if (empty($_GET['maid'])) {
-        $maid = 0;
-    } else $maid = 1;
-
-
-        $sql = 'SELECT * FROM houses';
-        $where = array();
-        $params = array();
-
-        if (!empty($_GET['state'])) {
-            $where[] = "state = :state";
-            $params[':state'] = $_GET['state'];
-        }
-
-        if (!empty($_GET['wifi'])) {
-            $where[] = "wifi = :wifi";
-            $params[':wifi'] = $_GET['wifi'];
-        }
-        if (!empty($_GET['poll'])) {
-            $where[] = "poll = :poll";
-            $params[':poll'] = $_GET['poll'];
-        }
-
-        if (!empty($_GET['maid'])) {
-            $where[] = "maid = :maid";
-            $params[':maid'] = $_GET['maid'];
-
-
-        if(count($where) > 0)
-            $sql .= ' WHERE ' . implode(' AND ', $where);
-
-        $stmt = $db->prepare($sql);
-
-        foreach($params as $param => $value) {
-            $stmt->bindParam($param, $value);
-        }
-
-        $stmt->execute();
-        $data = $stmt->fetchAll();
-
-
-                    $name = $data['name'];
-                    $state = $data['state'];
-                    $address = $data['address'];
-                    $price = $data['price'];
-                    $meter = $data['meter'];
-                    $telephone = $data['telephone'];
-                    $wifi = $data['wifi'];
-                    $pool = $data['pool'];
-                    $maid = $data['maid'];
-                    $description = $data['description'];
-                    $stars = $data['stars'];
-                    $imageLink = $data['imageName'];
-                    $longitude  = $data['longitude'];
-                    $latitude = $data['latitude'];
-
-
-    }
-
-   /* $query = $db->prepare("SELECT * FROM houses WHERE state = ? OR price LIKE ? OR maid = ? OR pool = ? OR maid = ?");
-    $query->bindValue(1, $state, PDO::PARAM_STR);
-    $query->bindValue(2, $price, PDO::PARAM_INT);
-    $query->bindValue(3, $maid, PDO::PARAM_INT);
-    $query->bindValue(4, $pool, PDO::PARAM_INT);
-    $query->bindValue(5, $maid, PDO::PARAM_INT);
-
-    $query->execute();
-
-    if ($query->rowCount() > 0) {
-        while ($row = $query->fetch()) {
-            $name = $row['name'];
-            $state = $row['state'];
-            $address = $row['address'];
-            $price = $row['price'];
-            $meter = $row['meter'];
-            $telephone = $row['telephone'];
-            $maid = $row['maid'];
-            $pool = $row['pool'];
-            $wifi = $row['wifi'];
-            $description = $row['description'];
-            $stars = $row['stars'];
-            $imageLink = $row['imageName'];
-            $longitude = $row['longitude'];
-            $latitude = $row['latitude'];
-
-        }
-    }
-
-    $num_rows = count($query);
-    echo $query->rowCount();*/
 }
 
 require("view_head.php");
@@ -117,7 +36,7 @@ require("view_navbar.php");
 ?>
 
 <div class="row">
-    <h4 class="well text-center">Search Result for <?php echo $state?> </h4>
+    <h4 class="well text-center">Search Result for <?php echo $name?> </h4>
 </div>
 <div class="container">
     <div class="row">
