@@ -37,7 +37,12 @@ try {
 }
 catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); }
 $row = $stmt->fetch();
-if($row){ $houseID=$row['houseID']; }
+if($row){
+    $houseID=$row['houseID']; } else {
+    header ("Location: view_imageUpload.php?msg=Upload_pics_first");
+    die("Redirecting to: view_imageUpload.php");}
+
+
 
 $query = "
                     SELECT *

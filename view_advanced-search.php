@@ -15,24 +15,6 @@ include ("view_navbar.php");
     <form class="form-horizontal" method="get" action="model_advanced-search.php">
         <fieldset>
 
-            <!-- Select Multiple -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="state">Select State</label>
-                <div class="col-md-5">
-                    <select id="state" name="state" class="form-control" multiple="multiple">
-                        <option value="Thraki">Thraki</option>
-                        <option value="Makedonia">Makedonia</option>
-                        <option value="Thessalia">Thessalia</option>
-                        <option value="Hpeiros">Hpeiros</option>
-                        <option value="Sterea Ellada">Sterea Ellada</option>
-                        <option value="Peloponissos">Peloponissos</option>
-                        <option value="Nisia Aigaiou">Nisia Aigaiou</option>
-                        <option value="Nisia Ioniou">Nisia Ioniou</option>
-                        <option value="Kriti">Kriti</option>
-                    </select>
-                </div>
-            </div>
-
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="price">Price</label>

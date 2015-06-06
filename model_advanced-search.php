@@ -15,26 +15,31 @@ $startIndex = ($curPage-1) * $recordsPerPage;
 
 //get all rows
 try {
-    $sql = "SELECT count(houseID) as recCount FROM houses";
-    $statement = $db->query($sql);
-    $record = $statement->fetch(PDO::FETCH_ASSOC);
-    $pages = ceil($record['recCount']/$recordsPerPage);
-    $totalResults = $record['recCount'];
-    $statement->closeCursor();
+$sql = "SELECT count(houseID) AS recCount FROM houses WHERE (price > :price/2 AND price < price*2)";
+$statement = $db->prepare($sql);
+$statement->execute(array(':price' => $_GET['price']));
+$record = $statement->fetch(PDO::FETCH_ASSOC);
+$pages = ceil($record['recCount'] / $recordsPerPage);
+$totalResults = $record['recCount'];
+$statement->closeCursor();
+
 
 //query for results
-    $record = null;
-    $sql = "SELECT * FROM houses LIMIT $startIndex, $recordsPerPage";
-    $statement = $db->query($sql);
+$record = null;
+$sql = "SELECT * FROM houses WHERE (price > :price/2 AND price < price*2) ORDER BY price ASC LIMIT $startIndex, $recordsPerPage ";
+$statement = $db->prepare($sql);
+$statement->execute(array(':price' => $_GET['price']));
+
+?>
 
 ?>
 <div class="container">
 
     <hgroup class="mb20">
         <h1>Search Results</h1>
-        <h2 class="lead"><strong class="text-danger"><?php echo $totalResults ?></strong> results were found for the search <strong class="text-danger">Houses</strong></h2>
+        <h2 class="lead"><strong class="text-danger"><?php echo $totalResults ?></strong> results were found for the search <strong class="text-danger"><?php echo $_GET['price'] ?> &#x20AC; </strong></h2>
     </hgroup>
-    <section class="col-xs-12 col-sm-6 col-md-12">
+    <section class="col-md-12">
 
 
 <?php
@@ -75,7 +80,7 @@ try {
         // εάν δεν είναι η τρέχουσα σελίδα, φτιάξε link
         if ($i<>$curPage) { ?>
 
-            <a href="model_advanced-search.php?page=<?php echo $i ?>"><?php echo $i ?></a>&nbsp;&nbsp;
+            <a href="model_advanced-search.php?page=<?php echo $i ?>&price=<?php echo $_GET['price'] ?>"><?php echo $i ?></a>&nbsp;&nbsp;
 
             <?php   // αν είναι η τρέχουσα σελίδα, τύπωσε απλά τον αριθμό της
         } else

@@ -123,7 +123,7 @@ function doNothing() {}
         <div class="col-lg-12 text-center">
             <h1>One Column Row Example</h1>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna</p>
-            <a class="btn btn-lg btn-primary" href="http://www.responsivewebmobile.com">Back to Rent My House</a>
+            <a class="btn btn-lg btn-primary" href="view_register.php">Register to get started</a>
         </div>
     </div>
 </div>
