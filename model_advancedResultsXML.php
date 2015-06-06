@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['xml']))
+
 
 require("config.php");
 
@@ -12,11 +12,12 @@ function parseToXML($htmlStr)
     $xmlStr=str_replace("&",'&amp;',$xmlStr);
     return $xmlStr;
 }
+//echo $_GET['pricexml'];
+//query for results
 
-
-$query = 'SELECT * FROM houses';
-$statement = $db->prepare($query);
-$statement->execute();
+$sql = "SELECT * FROM houses WHERE (price > :price/2 AND price < price*2) ORDER BY price LIMIT 3";
+$statement = $db->prepare($sql);
+$statement->execute(array(':price' => $_GET['pricexml']));
 
 header("Content-Type: text/xml; charset=UTF-8");
 

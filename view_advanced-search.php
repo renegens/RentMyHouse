@@ -11,7 +11,9 @@ include ("view_navbar.php");
 </div>
 <div class="col-lg-4 col-lg-offset-4">
 
-    <form id="forXML" action="model_advancedResultsXML.php" method="post"></form>
+    <form id="forXML" action="model_advancedResultsXML.php" method="get">
+        <input id="pricexmlid" name="pricexml"  style="display:none" type="text"  class="form-control input-md" >
+    </form>
     <form class="form-horizontal" method="get" action="model_advanced-search.php">
         <fieldset>
 
@@ -19,7 +21,7 @@ include ("view_navbar.php");
             <div class="form-group">
                 <label class="col-md-4 control-label" for="price">Price</label>
                 <div class="col-md-5">
-                    <input id="price" name="price" type="text" placeholder="€" class="form-control input-md" >
+                    <input id="price"  name="price" type="text" placeholder="€" class="form-control input-md" >
 
                 </div>
             </div>
@@ -56,14 +58,14 @@ include ("view_navbar.php");
                 <div class="col-md-8">
                     <button id="search" name="search" class="btn btn-success">Search</button>
                     <button id="clear" name="clear" class="btn btn-default">Clear</button>
-                    <button id="xml" name="xml" form="forXML" class="btn btn-danger">XML</button>
-
+                    <button id="xml" name="" form="forXML" value="" class="btn btn-danger">XML</button>
 
                 </div>
             </div>
 
         </fieldset>
     </form>
+
 
 </div>
 
@@ -100,8 +102,20 @@ include ("view_navbar.php");
     }
 
 
+
+
 </script>
 
 
 <?php include ("view_footer.php"); ?>
+
+<script>
+    $(document).ready(function()
+    {
+        $('#xml').click(function()
+        {
+            $('#pricexmlid').val($('#price').val());
+        });
+    });
+</script>
 
