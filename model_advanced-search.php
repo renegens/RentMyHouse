@@ -32,7 +32,6 @@ $statement->execute(array(':price' => $_GET['price']));
 
 ?>
 
-?>
 <div class="container">
 
     <hgroup class="mb20">
