@@ -57,7 +57,7 @@ include ("view_navbar.php");
                 <label class="col-md-4 control-label" for="submit"></label>
                 <div class="col-md-8">
                     <button id="search" name="search" class="btn btn-success">Search</button>
-                    <button id="clear" name="clear" class="btn btn-default">Clear</button>
+                    <button id="clear" name="clear" type="reset" class="btn btn-default">Clear</button>
                     <button id="xml" name="" form="forXML" value="" class="btn btn-danger">XML</button>
 
                 </div>
