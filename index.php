@@ -27,7 +27,9 @@ foreach ($statement as $row) {
         var mapOptions = {
             center: new google.maps.LatLng(39.638140, 22.450156),
             zoom: 7,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false
+
         }
         map = new google.maps.Map(mapCanvas, mapOptions);
     }
@@ -177,7 +179,7 @@ function doNothing() {}
 </div>
 
 
-<div class="container-fluid" style="height: 500px; width: 1000px;" id="map-canvas"></div>
+<div class="container-fluid" style="height: 500px; width: 100%;" id="map-canvas"></div>
 
 
 

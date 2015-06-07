@@ -62,7 +62,7 @@ require("view_navbar.php");
 </div>
 
 <div class="container">
-    <div style="width:1000px;height:500px;" id="map-canvas"></div>
+    <div style="width:100%;height:500px;" id="map-canvas"></div>
 </div>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBzsksClNr1SdvprMZYGY29cPnTv0QodR0"></script>
 <script type="text/javascript">
@@ -76,7 +76,8 @@ require("view_navbar.php");
         var myLatlng = new google.maps.LatLng(Lat,Long);
         var mapOptions = {
             zoom: 16,
-            center: myLatlng
+            center: myLatlng,
+            scrollwheel: false
         }
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
