@@ -32,11 +32,7 @@ foreach ($statement as $row) {
 
         }
         map = new google.maps.Map(mapCanvas, mapOptions);
-    }
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-downloadUrl("con_xml-markers.php", function(data) {
+        downloadUrl("con_xml-markers.php", function(data) {
     var xml = data.responseXML;
     var markers = xml.documentElement.getElementsByTagName("marker");
     for (var i = 0; i < markers.length; i++) {
@@ -51,6 +47,11 @@ downloadUrl("con_xml-markers.php", function(data) {
 
     }
 });
+    }
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
 
 function downloadUrl(url, callback) {
     var request = window.ActiveXObject ?
